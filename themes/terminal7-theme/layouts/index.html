@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ with .Site.Data.home.hero }}
+    {{ partial "sections/hero.html" . }}
+  {{ end }}
+
+  {{ with .Site.Data.home.gestures }}
+    {{ partial "sections/features-gestures.html" . }}
+  {{ end }}
+
+  {{ with .Site.Data.home.web }}
+    {{ partial "sections/features-web.html" . }}
+  {{ end }}
+
+  {{ with .Site.Data.home.home }}
+    {{ partial "sections/features-home.html" . }}
+  {{ end }}
+
+  {{ with .Site.Data.home.contact }}
+    {{ partial "sections/contact.html" . }}
+  {{ end }}
+
+  {{ partial "sections/blog.html" . }}
+{{ end }}

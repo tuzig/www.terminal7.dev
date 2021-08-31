@@ -1,0 +1,41 @@
+<head>
+    <!-- Title -->
+    <title>{{- .Site.Title -}}</title>
+
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+
+    <!-- Favicons and Manifest -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Meta Tags -->
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
+    {{ $mainSCSS := resources.Get "scss/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") }}
+
+    <!-- Stylesheets: Choose the ones to include below! -->
+    {{ $stylesheet := slice $mainSCSS | resources.Concat "css/style.css" }}
+    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}" media="screen">
+
+    <!-- JavaScript -->
+    {{ $mainJS := resources.Get "js/main.js" | minify }}
+
+    <!-- JavaScript: Choose the ones to include below! -->
+    {{ $javascript := slice  $mainJS | resources.Concat "js/script.js" }}
+    <script src="{{ $javascript.Permalink }}"></script>
+    
+    <!-- RSS -->
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+</head>

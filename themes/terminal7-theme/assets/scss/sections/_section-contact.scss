@@ -1,0 +1,140 @@
+.section-contact {
+  margin: 0 16px ;
+  font-size: 20px;
+
+  .contact-box {
+    position: relative;
+
+    height: 500px;
+    border-top: solid 2px #F952F9;
+    border-left: solid 2px #F952F9;
+
+    @media (min-width: 768px) {
+      height: 400px;
+    }
+
+    .right-border {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 40%;
+      border-right: solid 2px #F952F9;
+
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        height: 50%;
+      }
+    }
+    .bottom-border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      border-bottom: solid 2px #F952F9;
+    }
+  }
+
+  .contact-decision {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transform-origin: center;
+
+    width: 100px;
+    height: 100px;
+
+    border: solid 2px #F952F9;
+    background-color: #11051E;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+
+  .contact-decision-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transform-origin: center;
+  }
+  .contact-label-no {
+    position: absolute;
+    right: 73%;
+    transform: translateY(-150%);
+  }
+  .contact-label-yes {
+    position: absolute;
+    left: 73%;
+    transform: translateY(-150%);
+  }
+  .contact-textflight {
+    position: absolute;
+    top: 40%;
+    right: 100px;
+    transform: translate(50%, -50%);
+
+    width: 200px;
+    height: 125px;
+
+    border: solid 2px #F952F9;
+    border-radius: 125px;
+
+    background-color: #11051E;
+
+    @media (min-width: 768px) {
+      top: 50%;
+      right: 0;
+    }
+  }
+
+  .contact-form-input {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 200px;
+    height: 125px;
+
+    background-color: #11051E;
+
+    @media (min-width: 768px) {
+      top: 50%;
+    }
+
+    input {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      color: #00FAFA;
+      background-color: transparent;
+      border: none;
+      border-bottom: solid 2px #F952F9;
+      outline: none;
+    }
+  }
+
+  .contact-form-submit {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    background-color: #11051E;
+
+    button {
+      padding: 8px 16px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      color: #F952F9;
+      border: solid 2px #F952F9;
+      border-radius: 40px;
+      background-color: #11051E;
+      cursor: pointer;
+    }
+  }
+}

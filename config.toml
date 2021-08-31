@@ -1,0 +1,30 @@
+baseURL = "/"
+theme = "terminal7-theme"
+languageCode = "en-us"
+
+title = "Terminal7"
+
+[params]
+  title = "Terminal7"
+  description = ""
+  images = []
+  copyright = "copyright (c) tuzig LTD"
+
+[taxonomies]
+  series = "series"
+
+[menu]
+  [[menu.main]]
+    name = "github"
+    url = "#"
+    weight = 100
+
+  [[menu.main]]
+    name = "discord"
+    url = "#"
+    weight = 200
+
+  [[menu.main]]
+    name = "pricing"
+    url = "#"
+    weight = 300

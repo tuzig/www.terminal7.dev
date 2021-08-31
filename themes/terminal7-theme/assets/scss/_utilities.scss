@@ -1,0 +1,133 @@
+.display-inline-block { display: inline-block; }
+.display-flex { display: flex; }
+.display-none { display: none; }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .display-sm-flex { display: flex; }
+  .display-sm-none { display: none; }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .display-md-flex { display: flex; }
+  .display-md-none { display: none; }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .display-lg-flex { display: flex; }
+  .display-lg-none { display: none; }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .display-xl-flex { display: flex; }
+  .display-xl-none { display: none; }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .display-xxl-flex { display: flex; }
+  .display-xxl-none { display: none; }
+}
+
+.flex-direction-row { flex-direction: row; }
+.flex-direction-column { flex-direction: column; }
+.flex-direction-column-reverse { flex-direction: column-reverse; }
+
+.flex-grow-1 { flex-grow: 1; }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .flex-direction-sm-row { flex-direction: row; }
+  .flex-direction-sm-column { flex-direction: column; }
+  .flex-direction-sm-column-reverse { flex-direction: column-reverse; }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .flex-direction-md-row { flex-direction: row; }
+  .flex-direction-md-column { flex-direction: column; }
+  .flex-direction-md-column-reverse { flex-direction: column-reverse; }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .flex-direction-lg-row { flex-direction: row; }
+  .flex-direction-lg-column { flex-direction: column; }
+  .flex-direction-lg-column-reverse { flex-direction: column-reverse; }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .flex-direction-xl-row { flex-direction: row; }
+  .flex-direction-xl-column { flex-direction: column; }
+  .flex-direction-xl-column-reverse { flex-direction: column-reverse; }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .flex-direction-xxl-row { flex-direction: row; }
+  .flex-direction-xxl-column { flex-direction: column; }
+  .flex-direction-xxl-column-reverse { flex-direction: column-reverse; }
+}
+
+.align-items-center { align-items: center; }
+.align-items-end { align-items: flex-end; }
+
+.justify-content-end { justify-content: flex-end; }
+.justify-content-center { justify-content: center; }
+.justify-content-space-between { justify-content: space-between; }
+
+.margin-x-auto { margin-left: auto; margin-right: auto; }
+
+.margin-x-0 { margin-left: 0px; margin-right: 0px; }
+.margin-x-32 { margin-left: 32px; margin-right: 32px; }
+.margin-x-40 { margin-left: 40px; margin-right: 40px; }
+.margin-x-64 { margin-left: 64px; margin-right: 64px; }
+
+.margin-left-40 { margin-left: 40px; }
+.margin-right-8 { margin-right: 8px; }
+
+
+.padding-32 { padding: 32px; }
+
+.padding-x-0 { padding-left: 0px; padding-right: 0px; }
+.padding-x-8 { padding-left: 8px; padding-right: 8px; }
+.padding-x-16 { padding-left: 16px; padding-right: 16px; }
+.padding-x-32 { padding-left: 32px; padding-right: 32px; }
+
+.padding-y-4 { padding-top: 4px; padding-bottom: 4px; }
+.padding-y-8 { padding-top: 8px; padding-bottom: 8px; }
+.padding-y-16 { padding-top: 16px; padding-bottom: 16px; }
+.padding-y-32 { padding-top: 32px; padding-bottom: 32px; }
+.padding-y-64 { padding-top: 64px; padding-bottom: 64px; }
+.padding-y-128 { padding-top: 128px; padding-bottom: 128px; }
+
+.padding-top-8 { padding-top: 8px; }
+.padding-top-16 { padding-top: 16px; }
+
+.padding-bottom-0 { padding-bottom: 0; }
+.padding-bottom-64 { padding-bottom: 64px; }
+
+.padding-right-8 { padding-right: 8px; }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .padding-md-bottom-0 { padding-bottom: 0; }
+}
+
+.color-aqua { color: #00FAFA; }
+.color-blackcurrant { color: #271D30; }
+.color-pink-flamingo { color: #F952F9; }
+.color-chartreuse-yellow { color: #D9F505; }
+.color-hover-chartreuse-yellow:hover { color: #D9F505; }
+
+.font-family-courier-new { font-family: 'Courier New', Courier, monospace; }
+
+.font-size-16 { font-size: 16px; }
+
+.width-100 { width: 100%; }
+
+.text-align-center { text-align: center; }

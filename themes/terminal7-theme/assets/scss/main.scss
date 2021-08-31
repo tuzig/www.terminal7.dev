@@ -1,0 +1,79 @@
+@import "reset";
+@import "grid";
+@import "utilities";
+
+@import "sections/section-hero";
+@import "sections/section-gestures";
+@import "sections/section-web";
+@import "sections/section-home";
+@import "sections/section-contact";
+@import "sections/section-blog";
+@import "sections/footer";
+
+// #271D30
+// #11051E
+// #00FAFA
+// #F952F9
+// #D9F505
+
+html,
+body {
+  font-family: 'Fira Sans', sans-serif;
+  color: #00FAFA;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #11051E;
+  border: solid 16px #271D30;
+}
+
+h3 { font-size: 26px; }
+
+a {
+  color: #00FAFA;
+  text-decoration: none;
+}
+a:hover {
+  color: #00FAFA;
+  text-decoration: underline;
+}
+
+.menu-nav {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-top:16px;
+}
+
+.menu-list {
+  position: absolute;
+  left: 70.5%;
+  transform: translateX(-34px);
+}
+
+.menu-item {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.section-hero {
+  position: relative;
+}
+
+.section-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+.section-features-title {
+  font-size: 24px;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
+}
+
+

@@ -1,0 +1,24 @@
+<section class="section section-blog padding-y-64 margin-left-40 margin-right-8">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="blog-box column-md-8 column-lg-6 padding-x-0">
+        <h3 class="section-blog-title font-family-courier-new color-pink-flamingo">
+          Captain's Log
+        </h3>
+        <ul class="section-blog-list">
+          {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+            <li class="section-blog-item">
+              <h4 class="">
+                <a href="{{ .Permalink }}"><span class="item-title font-family-courier-new display-inline-block padding-x-16 padding-y-8">{{ .Title }}</span></a>
+                <span class="item-date display-inline-block padding-x-8">{{ .PublishDate.Format "January 2, 2006" }}</span>
+              </h4>
+              <p class="item-summary padding-x-16 padding-y-8">
+                {{ .Summary }}
+              </p>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

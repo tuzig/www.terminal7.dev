@@ -1,0 +1,19 @@
+<section class="section section-features-home padding-y-64">
+  <div class="container">
+    <div class="row flex-direction-column-reverse flex-direction-md-row">
+      <div class="features-left column-12 column-md-6 display-flex align-items-end justify-content-end">
+        <div class="width-100 padding-32 padding-md-bottom-0">
+          <img class="home-image" src="{{ .image.src }}" alt="{{ .image.alt }}">
+        </div>
+      </div>
+      <div class="features-right column-12 column-md-6 display-flex flex-direction-column padding-x-0">
+        <h3 class="font-family-courier-new padding-x-32 padding-y-8">{{ .title }}</h3> 
+        <ul class="features-right-list">
+          {{ range .list }}
+            <li class="features-right-item padding-x-32 padding-y-8">{{ . | safeHTML }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

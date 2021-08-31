@@ -1,0 +1,40 @@
+hero:
+  text: "To boldly go<br>where no terminal<br>has gone before"
+  beta: true
+
+gestures:
+  title: "Going to your Gestures"
+  list:
+    - "Termina 7 is a terminal multiplexer reincarnation. We"
+    - "develop it because we want a terminal that supports:"
+    - "<span class='padding-right-8'>•</span> touch gestures"
+    - "<span class='padding-right-8'>•</span> per-pane-font"
+    - "<span class='padding-right-8'>•</span> local scroll buffer"
+  vimeo: "559636012"
+
+web:
+  title: "Going to the Web"
+  list:
+    - "Terminal7 uses WebRTC's data chanels to send"
+    - "keystrokes and stream output. Part of the W3C"
+    - "standard, data channels use IETF's SCTP & DTLS for"
+    - "performace and security."
+  image:
+    src: "/images/web-image.png"
+    alt: "Featured Image"
+  
+home:
+  title: "Going to your Home"
+  list:
+    - "Thanks to WebRTC's ICE magic and our signaling"
+    - "server - peerbook - You can connect to"
+    - "behind-the-NAT servers. Use a gamming beast or a"
+    - "Raspberry Pi as your development host and save on"
+    - "hosting costs."
+  image:
+    src: "/images/home-image.png"
+    alt: "Featured Image"
+
+contact:
+  formAction: ""
+  buttonUrl: ""
