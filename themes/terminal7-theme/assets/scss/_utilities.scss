@@ -93,6 +93,10 @@
 
 .padding-32 { padding: 32px; }
 
+.padding-left-32 { padding-left: 32px; }
+
+.padding-right-32 { padding-right: 32px; }
+
 .padding-x-0 { padding-left: 0px; padding-right: 0px; }
 .padding-x-8 { padding-left: 8px; padding-right: 8px; }
 .padding-x-16 { padding-left: 16px; padding-right: 16px; }
@@ -131,3 +135,8 @@
 .width-100 { width: 100%; }
 
 .text-align-center { text-align: center; }
+
+.rounded-corners {
+  border-radius: 8px;
+  overflow: hidden;
+}

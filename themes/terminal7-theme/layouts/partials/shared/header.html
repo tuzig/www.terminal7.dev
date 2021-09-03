@@ -1,5 +1,5 @@
 <nav class="menu-nav container display-flex align-items-center justify-content-end">
-  <ul class="menu-list display-none display-md-flex align-items-center justify-content-end">
+  <ul class="menu-list display-flex align-items-center justify-content-end">
     {{ range $i, $e := .Site.Menus.main }}
       <li class="menu-item padding-x-8">
         <a href="{{ $e.URL }}"> {{ $e.Name }} </a>

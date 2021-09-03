@@ -8,11 +8,23 @@
       </div>
       <div class="features-right column-12 column-md-6 display-flex flex-direction-column padding-x-0">
         <h3 class="font-family-courier-new padding-x-32 padding-y-8">{{ .title }}</h3> 
-        <ul class="features-right-list">
-          {{ range .list }}
-            <li class="features-right-item padding-x-32 padding-y-8">{{ . | safeHTML }}</li>
-          {{ end }}
-        </ul>
+        <div class="features-right-content">
+          <div class="features-right-text padding-x-32">
+            {{ .text |safeHTML }}
+            <ul class="features-right-list">
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -66,11 +66,13 @@
     position: absolute;
     right: 73%;
     transform: translateY(-150%);
+    color: #D9F505;
   }
   .contact-label-yes {
     position: absolute;
     left: 73%;
     transform: translateY(-150%);
+    color: #D9F505;
   }
   .contact-textflight {
     position: absolute;
@@ -115,6 +117,26 @@
       border: none;
       border-bottom: solid 2px #F952F9;
       outline: none;
+    }
+
+    select {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      color: #00FAFA;
+      background-color: transparent;
+      border: none;
+      border-bottom: solid 2px #F952F9;
+      outline: none;
+      width: 132%;
+
+      option {
+        color: #00FAFA;
+        background-color: #271D30;
+      }
+
+      &:required:invalid {
+        color: #757575;
+      }
     }
   }
 

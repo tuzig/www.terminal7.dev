@@ -19,8 +19,17 @@
 html,
 body {
   font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
   color: #00FAFA;
   overflow-x: hidden;
+}
+
+
+@media (min-width: 576px) {
+  html,
+  body {
+    font-size: 16px;
+  }
 }
 
 body {
@@ -29,7 +38,7 @@ body {
   border: solid 16px #271D30;
 }
 
-h3 { font-size: 26px; }
+h3 { font-size: 1.5rem; }
 
 a {
   color: #00FAFA;
@@ -47,14 +56,23 @@ a:hover {
   margin-top:16px;
 }
 
-.menu-list {
-  position: absolute;
-  left: 70.5%;
-  transform: translateX(-34px);
+@media (min-width: 768px) {
+  .menu-list {
+    position: absolute;
+    left: 70.5%;
+    transform: translateX(-34px);
+  }
 }
 
 .menu-item {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 576px) {
+  .menu-item {
+    font-size: 1rem;
+  }
 }
 
 .section-hero {
@@ -67,13 +85,13 @@ a:hover {
   left: 25%;
 }
 
-.section-features-title {
-  font-size: 24px;
+// .section-features-title {
+//   font-size: 24px;
 
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
-    font-size: 26px;
-  }
-}
+//   // Medium devices (tablets, 768px and up)
+//   @media (min-width: 768px) {
+//     font-size: 26px;
+//   }
+// }
 
 

@@ -25,8 +25,14 @@
           <form class="display-flex flex-direction-column" action="{{ .formAction }}" method="post">
             <div class="contact-form-input">
               <input type="text" name="name" id="name" placeholder="Name" class="padding-y-8 padding-x-16">
-              <input type="email" name="email" id="email" placeholder="Email" class="padding-y-8 padding-x-16">
-              <input type="text" name="operating-system" id="operating-system" placeholder="Operating System" class="padding-y-8 padding-x-16">
+              <input required type="email" name="email" id="email" placeholder="Email" class="padding-y-8 padding-x-16">
+              <select required name="operating-system" id="operating-system" placeholder="Operating System" class="padding-y-8 padding-x-16">
+                <option disabled selected hidden value="">Operating System</option>
+                <option value="android">Android</option>
+                <option value="chromebook">ChromeBook</option>
+                <option value="Windows">Windows</option>
+                <option value="Other">Other</option>
+              </select>
               <input type="text" name="other" id="other" placeholder="Other" class="padding-y-8 padding-x-16">
             </div>
             <div class="contact-form-submit">
