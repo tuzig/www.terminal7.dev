@@ -15,7 +15,6 @@ body {
   font-family: 'Fira Sans', sans-serif;
   font-size: 20px;
   color: #00FAFA;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -31,6 +30,7 @@ body {
   min-height: 100vh;
   background-color: #11051E;
   border: solid 16px #271D30;
+  overflow-x: hidden;
 }
 
 h3 { font-size: 1.5rem; }

@@ -15,7 +15,6 @@
     }
   }
 
-  
   .footer-menu {
     position: relative;
     background-color: #271D30;
@@ -44,7 +43,9 @@
 
       .block-icon {
         position: absolute;
-        transform: translate(40%, 0);
+        top: 0;
+        right: 32px;
+        transform: translateX(150%);
         height: 95%;
         width: 10%;
         background-color: #00FAFA;
