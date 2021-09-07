@@ -53,7 +53,22 @@
 
     .features-right-text {
       position: relative;
-      overflow-y: clip;
+      overflow-y: hidden;
+      width: 200%;
+    }
+
+    .features-right-text-body {
+      padding-right: 114px;
+      max-width: 100vw;
+
+      @media (min-width: 576px) {
+        padding-right: 64px;
+        max-width: 540px;
+      }
+      @media (min-width: 768px) {
+        padding-right: 32px;
+        max-width: 100vw;
+      }
     }
 
     .features-right-list {
@@ -73,7 +88,7 @@
         position: absolute;
         bottom: 0;
         left: -2px;
-        width: 200%;
+        width: 100%;
         border-bottom: solid 2px rgba(249, 82, 249, .1);
       }
 
@@ -82,7 +97,7 @@
         position: absolute;
         top: 0;
         left: -2px;
-        width: 200%;
+        width: 100%;
         border-bottom: solid 2px #F952F9; 
       }
       &:nth-child(1)::before { border-bottom: solid 2px rgba(249, 82, 249, .8); }

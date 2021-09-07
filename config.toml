@@ -21,10 +21,10 @@ title = "Terminal7"
 
   [[menu.main]]
     name = "discord"
-    url = ""
+    url = "https://discord.com/invite/rDBj8k4tUE"
     weight = 200
 
   [[menu.main]]
-    name = "pricing"
-    url = "#"
+    name = "twitter"
+    url = "https://twitter.com/7terminal"
     weight = 300

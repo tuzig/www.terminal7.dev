@@ -1,6 +1,7 @@
 hero:
   text: "To boldly go<br>where no terminal<br>has gone before"
   beta: true
+  betaLink: "#contact"
 
 gestures:
   title: "Going to your Gestures"

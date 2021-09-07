@@ -10,18 +10,13 @@
 @import "sections/section-blog";
 @import "sections/footer";
 
-// #271D30
-// #11051E
-// #00FAFA
-// #F952F9
-// #D9F505
-
 html,
 body {
   font-family: 'Fira Sans', sans-serif;
   font-size: 20px;
   color: #00FAFA;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 

@@ -10,7 +10,9 @@
         <h3 class="font-family-courier-new padding-x-32 padding-y-8">{{ .title }}</h3> 
         <div class="features-right-content">
           <div class="features-right-text padding-x-32">
-            {{ .text |safeHTML }}
+            <div class="features-right-text-body column-12 column-md-6">
+              {{ .text |safeHTML }}
+            </div>
             <ul class="features-right-list">
               <li class="features-right-item padding-left-32 padding-y-8"></li>
               <li class="features-right-item padding-left-32 padding-y-8"></li>
