@@ -10,7 +10,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 200%;
+      width: 100%;
       border-bottom: solid 2px #F952F9;
     }
 
@@ -23,7 +23,7 @@
         bottom: 0;
         left: unset;
         right: 0;
-        width: 200%;
+        width: 100%;
         border-bottom: solid 2px #F952F9;
       }
     }
@@ -45,11 +45,10 @@
     .features-right-text {
       position: relative;
       overflow-y: hidden;
-      width: 200%;
+      width: 100%;
     }
 
     .features-right-text-body {
-      padding-right: 114px;
       max-width: 100vw;
 
       @media (min-width: 576px) {
