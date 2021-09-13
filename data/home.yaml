@@ -6,8 +6,8 @@ hero:
 gestures:
   title: "Going to your Gestures"
   text: >
-    Terminal7 is a terminal multiplexer reincarnation. We
-    develop it because we want a terminal that supports:<br>
+    Terminal7 is a terminal multiplexer reincarnation.
+    We develop it because daonb wanted a tool that supports:<br>
     <span class='padding-right-8'>•</span> touch gestures<br>
     <span class='padding-right-8'>•</span> per-pane-font<br>
     <span class='padding-right-8'>•</span> local scroll buffer<br>
@@ -16,25 +16,24 @@ gestures:
 web:
   title: "Going to the Web"
   text: >
-    Terminal7 uses WebRTC's data chanels to send
+    Terminal7 uses WebRTC's data channels to send
     keystrokes and stream output. Part of the W3C
     standard, data channels use IETF's SCTP & DTLS for
     performace and security.
   image:
     src: "/images/web-image.png"
-    alt: "Featured Image"
+    alt: "A layer cake of the protocls we use, layers 4- "
   
 home:
   title: "Going to your Home"
   text: >
-    Thanks to WebRTC's ICE magic and our signaling
-    server - peerbook - You can connect to
-    behind-the-NAT servers. Use a gamming beast or a
-    Raspberry Pi as your development host and save on
-    hosting costs.
+    Terminal7 comes with an address book and signaling service - PeerBook.
+    PeerBook uses ICE protocol magic, connecting Terminal7 to
+    behind-the-NAT servers. Use your desktop or home-hosted Raspberry Pi
+    and save on hosting costs.
   image:
     src: "/images/home-image.png"
-    alt: "Featured Image"
+    alt: "A network diagram showing a Terminl7 user connecting to different hosts"
 
 contact:
   formAction: ""
