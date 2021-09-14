@@ -28,7 +28,7 @@
 
     <!-- Stylesheets: Choose the ones to include below! -->
     {{ $stylesheet := slice $mainSCSS | resources.Concat "css/style.css" }}
-    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}" media="screen">
+    <link rel="stylesheet" href="/css/style.css" media="screen">
 
     <!-- JavaScript -->
     {{ $mainJS := resources.Get "js/main.js" | minify }}
