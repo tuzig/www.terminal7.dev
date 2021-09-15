@@ -33,6 +33,7 @@
       font-size: 14px;
     }
     .item-summary {
+      line-height: 20px;
       font-size: 14px;
     }
   }
@@ -50,8 +51,14 @@
       padding: 16px;
 
       p {
+    
+        font-size: 16px;
+        line-height: 20px;
         margin-bottom: 16px;
         text-align: justify;
+        img {
+            width: 100%;
+        }
       }
     }
 
