@@ -1,4 +1,4 @@
 ---
 title: "Terminal7"
-description: ""
+description: "To boldly go where no terminal has gone before"
 ---
