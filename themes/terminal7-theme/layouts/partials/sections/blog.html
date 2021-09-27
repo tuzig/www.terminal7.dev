@@ -7,18 +7,96 @@
         </h3>
         <ul class="section-blog-list">
           {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
-            <li class="section-blog-item">
-              <h4 class="">
-                <a href="{{ .Permalink }}"><span class="item-title font-family-courier-new display-inline-block padding-x-16 padding-y-8">{{ .Title }}</span></a>
-                <span class="item-date display-inline-block padding-x-8">{{ .PublishDate.Format "January 2, 2006" }}</span>
-              </h4>
-              <p class="item-summary padding-x-16 padding-y-8">
-                {{ .Summary }}
-              </p>
-            </li>
+            {{ partial "sections/post.html" . }}
           {{ end }}
         </ul>
+        <div class="display-flex justify-content-center padding-y-32">
+          <span class="no-more-posts display-none">These are all the posts!</span>
+          <a class="blog-button display-flex align-items-center justify-content-center" onclick="fetchNextPage()">
+            <span class="blog-button-label"> Show More </span>
+            <div class="lds-ring display-none"><div></div><div></div><div></div><div></div></div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
+  <script>
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    let currentPage = 1;
+
+    async function getData(url) {
+      const response = await fetch(url);
+
+      return response.json();
+    }
+
+    {{ $paginator := .Paginate (where site.Pages "Type" "posts") }}
+
+    async function fetchNextPage() {
+      currentPage += 1;
+      totalPages = {{ $paginator.TotalPages }};
+
+      if ( currentPage > totalPages ) {
+        const button = document.querySelector(".blog-button");
+        const notice = document.querySelector(".no-more-posts");
+
+        button.classList.remove("display-flex");
+        button.classList.add("display-none");
+
+        notice.classList.add("display-inline-block");
+        notice.classList.remove("display-none");
+        return;
+      }
+
+      const url = "{{ site.BaseURL }}" + "/posts/page/" + currentPage + "/index.json"
+
+      const label = document.querySelector(".blog-button-label");
+      const loading = document.querySelector(".lds-ring");
+
+      label.classList.remove("display-inline-block");
+      label.classList.add("display-none");
+
+      loading.classList.add("display-inline-block");
+      loading.classList.remove("display-none");
+
+      let data;
+
+      try {
+        data = await getData(url);
+      } catch {
+        loading.classList.remove("display-inline-block");
+        loading.classList.add("display-none");
+
+        label.classList.add("display-inline-block");
+        label.classList.remove("display-none");
+      }
+
+      loading.classList.remove("display-inline-block");
+      loading.classList.add("display-none");
+
+      label.classList.add("display-inline-block");
+      label.classList.remove("display-none");
+
+      const parent = document.querySelector(".section-blog-list");
+
+      data.forEach( item => {
+        const e = document.createElement('li');
+        const date = new Date(item.PublishDate)
+
+        e.innerHTML = `
+          <li class="section-blog-item">
+            <h4 class="">
+              <a href="${item.Permalink}"><span class="item-title font-family-courier-new display-inline-block padding-x-16 padding-y-8">${item.Title}</span></a>
+              <span class="item-date display-inline-block padding-x-8">${months[ date.getMonth() ]} ${date.getDay()}, ${date.getFullYear()}</span>
+            </h4>
+            <p class="item-summary padding-x-16 padding-y-8">
+              ${item.Summary}
+            </p>
+          </li>
+          `;
+
+        parent.appendChild(e);
+      });
+    }
+  </script>
 </section>

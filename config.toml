@@ -4,6 +4,8 @@ languageCode = "en-us"
 
 title = "Terminal7"
 
+paginate = 3
+
 [params]
   title = "Terminal7"
   description = "To boldly go where no terminal has gone before"
@@ -28,3 +30,4 @@ title = "Terminal7"
     name = "twitter"
     url = "https://twitter.com/7terminal"
     weight = 300
+
