@@ -7,7 +7,7 @@ gestures:
   title: "Going to your Gestures"
   text: >
     Terminal7 is a terminal multiplexer reincarnation.
-    We develop it because we wanted a tool that supports:<br>
+    We develop it because daonb wanted a terminal that supports:<br>
     <span class='padding-right-8'>•</span> touch gestures<br>
     <span class='padding-right-8'>•</span> per-pane-font<br>
     <span class='padding-right-8'>•</span> local scroll buffer<br>
