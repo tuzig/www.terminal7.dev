@@ -6,7 +6,7 @@
           Captain's Log
         </h3>
         <ul class="section-blog-list">
-          {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+          {{ range first 10 (where .Site.RegularPages "Section" "posts") }}
             {{ partial "sections/post.html" . }}
           {{ end }}
         </ul>
@@ -21,8 +21,10 @@
     </div>
   </div>
   <script>
-    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    let currentPage = 1;
+    {{ $paginator := .Paginate (where site.Pages "Type" "posts") }}
+    let currentPage = 1,
+        months = ['January','February','March','April','May','June','July',
+                  'August','September','October','November','December'];
 
     async function getData(url) {
       const response = await fetch(url);
@@ -30,11 +32,10 @@
       return response.json();
     }
 
-    {{ $paginator := .Paginate (where site.Pages "Type" "posts") }}
 
     async function fetchNextPage() {
+      let totalPages = {{ $paginator.TotalPages }}
       currentPage += 1;
-      totalPages = {{ $paginator.TotalPages }};
 
       if ( currentPage > totalPages ) {
         const button = document.querySelector(".blog-button");
@@ -98,5 +99,19 @@
         parent.appendChild(e);
       });
     }
+      window.addEventListener('DOMContentLoaded', event => {
+          var totalPages = {{ $paginator.TotalPages }};
+          if ( currentPage == totalPages ) {
+            const button = document.querySelector(".blog-button");
+            const notice = document.querySelector(".no-more-posts");
+
+            button.classList.remove("display-flex");
+            button.classList.add("display-none");
+
+            notice.classList.add("display-inline-block");
+            notice.classList.remove("display-none");
+            return;
+          }
+            })
   </script>
 </section>
