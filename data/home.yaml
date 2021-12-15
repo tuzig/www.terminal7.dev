@@ -1,16 +1,12 @@
 hero:
   text: "To boldly go<br>where no terminal<br>has gone before"
   beta: true
-  betaLink: "#contact"
-
+  betaLink: "https://pwa.terminal7.dev"
 gestures:
   title: "Going to your Gestures"
   text: >
-    Terminal7 is an open source terminal multiplexer reincarnation.
-    We started it because we wanted a terminal that supports:<br>
-    <span class='padding-right-8'>•</span> touch gestures<br>
-    <span class='padding-right-8'>•</span> per-pane-font<br>
-    <span class='padding-right-8'>•</span> local scroll buffer<br>
+    Terminal7 is a re-incranation of tmux & screen over a network.
+    It uses WebRTC for real time communications, a smart client for fast responses and a pion based tty streaming server.  
   vimeo: "559636012"
 
 web:
@@ -24,12 +20,14 @@ web:
     src: "/images/web-image.png"
     alt: "A layer cake of the protocls we use, layers 4- "
   
+
 home:
   title: "Going to your Home"
   text: >
-    Terminal7 comes with an address book and signaling service - PeerBook.
-    PeerBook uses ICE protocol magic, connecting Terminal7 to
-    behind-the-NAT servers. Use your desktop or home-hosted Raspberry Pi
+    Terminal7 comes with an address book and signaling service - peerbook.io .
+    It includes web socket signalling server that speeds up connection time and
+    extends Terminal7's reach to dynamic IP server and behind-the-NAT. 
+    With peerbook you can use your desktop or Raspberry Pi
     and save on hosting costs.
   image:
     src: "/images/home-image.png"
@@ -38,3 +36,7 @@ home:
 contact:
   formAction: ""
   buttonUrl: "https://testflight.apple.com/join/v3IIl1o2"
+
+beta:
+  title: "Join the Beta"
+  betaLink: "https://pwa.terminal7.dev"
