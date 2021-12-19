@@ -5,8 +5,12 @@ hero:
 gestures:
   title: "Going to your Gestures"
   text: >
-    Terminal7 is a re-incranation of tmux & screen over a network.
-    It uses WebRTC for real time communications, a smart client for fast responses and a pion based tty streaming server.  
+    Terminal7 is a next generation terminal. It includes a multiplexer for multiple
+    terminals on a screen and real time communications to tackle intenet
+    weather. Based on WebRTC and inspired by tmux & screen Terminal7 supports:<br>
+    <span class='padding-right-8'>•</span> Touch gestures<br>
+    <span class='padding-right-8'>•</span> Long living layouts<br>
+    <span class='padding-right-8'>•</span> Per pane font size<br>
   vimeo: "559636012"
 
 web:
