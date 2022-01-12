@@ -11,16 +11,6 @@
       bottom: -20%;
       right: 15%;
 
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        width: 70%;
-        height: 70%;
-        background-color: #11051E;
-        border-radius: 100%;
-      }
 
       img {
         position: relative;
