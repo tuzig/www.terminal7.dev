@@ -43,6 +43,21 @@ a:hover {
   color: #00FAFA;
   text-decoration: underline;
 }
+pre {
+    box-sizing: border-box;
+    margin: 0 0 1.75em 0;
+    width: 100%;
+    padding: 24px;
+    border-radius: 2px;
+    font-size:16px;
+    line-break: anywhere;
+    background-color: black;
+    font-family: monospace;
+}
+code {
+    line-height: 1.4;
+    font-weight: 500;
+}
 .menu-nav {
   position: relative;
   width: 100%;
