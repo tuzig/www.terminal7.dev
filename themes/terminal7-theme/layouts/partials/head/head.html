@@ -28,7 +28,7 @@
 
     <!-- Stylesheets: Choose the ones to include below! -->
     {{ $stylesheet := slice $mainSCSS | resources.Concat "css/style.css" }}
-    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}" media="screen">
+    <link rel="stylesheet" href="{{ $stylesheet.RelPermalink }}" media="screen">
     {{- $syntaxCSS := resources.Get "syntax/main.css" | minify -}}
     <style>
         {{ $syntaxCSS.Content | safeCSS }}
@@ -39,11 +39,11 @@
 
     <!-- JavaScript: Choose the ones to include below! -->
     {{ $javascript := slice  $mainJS | resources.Concat "js/script.js" }}
-    <script src="{{ $javascript.Permalink }}"></script>
+    <script src="{{ $javascript.RelPermalink }}"></script>
     
     <!-- RSS -->
     {{ range .AlternativeOutputFormats -}}
-        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{ end -}}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RTBJ2K2FG"></script>

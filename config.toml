@@ -1,4 +1,5 @@
 baseURL = "https://terminal7.dev/"
+relativeURLs = true
 theme = "terminal7-theme"
 languageCode = "en-us"
 
