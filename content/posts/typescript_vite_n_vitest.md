@@ -347,19 +347,27 @@ the mocks code in several files doesn't help
 With this simple mock I could write a simple test terminal
 to verify Terminal7 is using the session layer properly:
 
-...TypeScript
-  gate.open(element)
-  gate.connect()
-  await sleep(100)
-  expect(gate.session.connect).toHaveBeenCalledTimes(1)
-  expect(gate.session.openChannel).toHaveBeenCalledTimes(1)
-  expect(gate.session.openChannel.mock.calls[0]).toEqual(["bash", null, 80, 24])
+```TypeScript
 ...
+vi.mock('xterm')
+vi.mock('../src/sshsession.ts')
+
+describe("gate", () => {
+  it("can be connected", async () => {
+      ...
+      gate.connect()
+      await sleep(100)
+      expect(gate.session.connect).toHaveBeenCalledTimes(1)
+      expect(gate.session.openChannel).toHaveBeenCalledTimes(1)
+      expect(gate.session.openChannel.mock.calls[0]).toEqual(
+        ["bash", null, 80, 24])
+      ...
+```
 
 ## Back in the wild
 
 Finally I can get off the javascript tool merry-go-round and work on restoring
-Terminal7 peerbook communications.
+Terminal7 peerbook communications - this time through the new `Session` layer.
 It took the better part of two weeks, but it was worth it
 Terminal7 now enjoys a more descriptive TypeScript, an ultra-fast development
 server and test runner.
