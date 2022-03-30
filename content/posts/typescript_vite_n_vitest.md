@@ -3,16 +3,13 @@ title: "Migrating to TypeScript, Vite and Vitest"
 date: 2022-03-28T10:24:49-03:00
 ---
 
-# Replacing Webpack, Karma, Mocha and Chai with Vite and Vitest
-
 ### TL;DR: I've been taken for another round on the javascipt merry go around.
 
-###
+### &nbsp;
 
-Spring is here and its yack shaving season.  It started a few weeks ago 
-when the weather was still foul and I realized Terminal7 needs deep refactoring.
-It needs a new session  layer so it can 
-support five communication paths:
+Spring is here and with it the yack shaving season.  It started a few weeks ago 
+when the weather was still foul, I realized Terminal7 needs deep refactoring.
+It needs to support plain SSH and a few other communication paths:
 
 - full ssh: all communication is over ssh
 - webexec over ssh: signaling is over ssh, all the rest over WebRTC (mosh's way)
@@ -22,11 +19,11 @@ support five communication paths:
 
 {{< youtube Uo3cL4nrGOk >}}
 
-### 
+### &nbsp;
 
 This requires a new abstraction layer to handle the session for
 the multiplexer. To define this layer plain ES6 is not enough. 
-So I willingly fell into the TypeScript rabbit hole.
+So I jumped into the TypeScript rabbit hole. 
 I read the docs and posts and really like the syntax and power.
 The docs are great - almost everything is in 
 [TypeScript's guide for a javascript programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html).
@@ -371,11 +368,11 @@ Terminal7 peerbook communications - this time through the new `Session` layer.
 It took the better part of two weeks, but it was worth it
 Terminal7 now enjoys a more descriptive TypeScript, an ultra-fast development
 server and test runner.
-The dev environment has less dependecies and configuration files are slick.
+The dev environment has less dependencies and configuration files are slick.
 In the process I gathered a better perspective of the yacks I still have to shave
 and debt I need to clear.
 
 It wasn't painless and I suspect that like
 all javascript tools of the past, vite will not age well. I'd recommend switching
 only for those project with good reasons - either before a deep refactor
-or in the unfutunate event when contributers hate the current tools.
+or in the unfortunate event when contributors hate the current tools.
