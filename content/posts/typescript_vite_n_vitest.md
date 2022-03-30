@@ -1,5 +1,5 @@
 ---
-title: "Migrating to TypeScript, Vite and Vitest"
+title: "Embracing TypeScript and migrating to Vite and Vitest"
 date: 2022-03-28T10:24:49-03:00
 ---
 
@@ -125,7 +125,8 @@ I alos dded a short `sw.js` file to get set the strategy for the PWA's
 service worker:
 
 ```javascript
-import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching'
+import { precacheAndRoute,
+  cleanupOutdatedCaches } from 'workbox-precaching'
 
 cleanupOutdatedCaches()
 precacheAndRoute(self.__WB_MANIFEST)
@@ -230,23 +231,24 @@ the tests pass:
 
 ```typescript
 export class Terminal {
-    loadAddon = vi.fn()
-    onSelectionChange = vi.fn()
-    onData = vi.fn()
-    focus = vi.fn()
-    buffer = { active: {cursorX: 1, cursorY: 1}}
-    attachCustomKeyEventHandler = vi.fn()
-    loadWebfontAndOpen = vi.fn(e => new Promise(resolve => {
-        setTimeout(_ => {
-            this.textarea = document.createElement('textarea')
-            e.appendChild(this.textarea)
-            resolve()
-        }, 0)
-    }))
-    constructor (props) {
-        for (const k in props)
-            this[k] = props[k]
-    }
+  loadAddon = vi.fn()
+  onSelectionChange = vi.fn()
+  onData = vi.fn()
+  focus = vi.fn()
+  buffer = { active: {cursorX: 1,
+                      cursorY: 1}}
+  attachCustomKeyEventHandler = vi.fn()
+  loadWebfontAndOpen = vi.fn(e =>
+    new Promise(resolve => {
+      setTimeout(_ => {
+        ...
+        resolve()
+      }, 0)
+  }))
+  constructor (props) {
+      for (const k in props)
+          this[k] = props[k]
+  }
 }
 ```
 
@@ -256,7 +258,9 @@ such as:
 
 ```typescript
 ...
-expect(pane.terminal.focus.toHaveBeenCalled(1))
+expect(pane.terminal.focus
+       .toHaveBeenCalled(1))
+...
 ```
 
 To mock asynchrounous methods such as `loadWebfontAndOpen` I use setTimout with 0
@@ -294,10 +298,12 @@ in the source module directory. As the module I was mocking was at
 `src/sshsession.ts` the mock was at `src/__mock__/sshsession.ts`.
 
 ```TypeScript
-import { Session, Channel, State, CallbackType } from "../session.ts"
+import { Session, Channel, State, 
+         CallbackType } from "../session.ts"
 
 const later = (ret: unknown) =>
-  vi.fn(() => new Promise( resolve => setTimeout(() => resolve(ret), 0)))
+ vi.fn(() => new Promise(resolve =>
+   setTimeout(() => resolve(ret), 0)))
 
 class MockChannel implements Channel {
   id = 1
@@ -314,14 +320,12 @@ class MockChannel implements Channel {
 export class SSHSession implements Session {
   onStateChange: (state: State) => void
   onPayloadUpdate: (payload: string) => void
-  constructor(address: string, username: string,
-    password: string, port?=22) {
-      console.log("New seesion", address, username, password, port)
+  constructor(...) {
+      console.log("New seesion")
   }
   connect = vi.fn(() => setTimeout(() => 
     this.onStateChange("connected"), 0))
-  openChannel = vi.fn(
-      (cmd: string, parent: ChannelID, sx?: number, sy?: number) =>
+  openChannel = vi.fn( ... ) =>
       new Promise(resolve => {
           setTimeout(() => {
               const c = new MockChannel()
@@ -354,10 +358,13 @@ describe("gate", () => {
       ...
       gate.connect()
       await sleep(100)
-      expect(gate.session.connect).toHaveBeenCalledTimes(1)
-      expect(gate.session.openChannel).toHaveBeenCalledTimes(1)
-      expect(gate.session.openChannel.mock.calls[0]).toEqual(
-        ["bash", null, 80, 24])
+      expect(gate.session.connect)
+      .toHaveBeenCalledTimes(1)
+      expect(gate.session.openChannel)
+      .toHaveBeenCalledTimes(1)
+      expect(gate.session.openChannel
+             .mock.calls[0]).toEqual(
+                ["bash", null, 80, 24])
       ...
 ```
 
