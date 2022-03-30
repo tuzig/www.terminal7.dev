@@ -14,8 +14,10 @@ It needs to support plain SSH and a few other communication paths:
 - full ssh: all communication is over ssh
 - webexec over ssh: signaling is over ssh, all the rest over WebRTC (mosh's way)
 - peerbook.io: online service for behind-the-nat servers and streaming.
-- local os: using shell processes in a laptops & desktops package
+- local OS: using shell processes in a laptops & desktops package
 - TBD
+
+### &nbsp;
 
 {{< youtube Uo3cL4nrGOk >}}
 
@@ -25,19 +27,19 @@ This requires a new abstraction layer to handle the session for
 the multiplexer. To define this layer plain ES6 is not enough. 
 So I jumped into the TypeScript rabbit hole. 
 I read the docs and posts and really like the syntax and power.
-The docs are great - almost everything is in 
+Almost everything I needed to know is in the well written
 [TypeScript's guide for a javascript programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html).
 
-Thanks to just a few extensions TypeScript made it possible
+Thanks to just a few extensions, TypeScript made it possible
 to code the architecture for the new layer.
 As a base, I used the ssh RFC and libshh2 and their terms:
 sessions and channels.
 These became the `Session` and `Channel` interfaces.
-This are used by Terminal7's `Gate` for communications.
+These are used by Terminal7's `Gate` for communications.
 
 Some of the communication methods are basic and some are advanced.
 The advanced ones support orderly disconnect and reconnect and
-a server store. Terminal7 saves the layout in the store so all the
+his store so all the
 tabs and panes survive app restart.
 
 TypeScript supports two patterns (and probably more) to define the advanced 
@@ -47,21 +49,21 @@ They require the caller to add logic to handle missing methods which complicate
 their code.
 
 I chose to create a base class where the advanced methods are stubbed:
-the restore method returns an clean slate and the store method just logs 
-the new state.  This code was bundled as abstract
-classes to be used by all five implementation. The base class also gave
+the restore method returns a clean slate and the store method just logs 
+the new state. This code was bundled as abstract
+classes to be used by all five implementations. The base class also gave
 me a future place for utility methods shared among all methods.
 
 After coding './src/session.ts` I needed to transpile the code to javascript
 for browsers' consumption.
 Terminal7 was using WebPack and needed a non-trivial upgrade to version 3.
-I wasted an evening trying to migrate only to fail and realize I don't like WebPack. 
-Too many parts and the configurations is complex.
+I wasted an evening trying to migrate only to fail and realize I don't like WebPack - 
+there are too many moving parts and the configuration is complex.
 
 ## Ditching WebPack
 
 A bit of research led me to vite & rollup as the rising stars in
-jacvascript tooling sky. 
+jacvascript tooling skies. 
 vite is focused on the developers and leaves the build process to rollup.
 It does a great job of running a fast & updated local dev server.
 vite has Hot Module Reload (HMR) which quickly updates the dev server whenever I
@@ -73,9 +75,8 @@ replace `src/index.js` with `main.js`.
 While this last change is not mandatory, it is the recommended way and
 `index.js` was never a good name.
 
-When I run the vite command it crawls the index, sources the script at
-`main.js`, imports all modules, css, etc, packages it for browsers' consumption
-and serve it over a watchful web server. It's very fast and it's error codes
+When I run the vite command it It reads `./index.html`, loads the source module pointed to by the script tag, imports all modules, css, etc, packages it for browsers' consumption
+and serves it over a watchful web server. It's very fast and its error codes
 usually make sense.
 
 vite's configuration is simple. To get started all you need is a vite.conf.js
@@ -89,10 +90,10 @@ export default defineConfig({
 })
 ```
 
-the defualt config brings all the popular stuff and for most projects its enough.
+The default config brings all the popular stuff and for most projects it's enough.
 I wasn't that lucky as Terminal7 can be installed as a PWA which means it has a
 manifest, icons and worker script.
-This proved simple enough as the VitePWA plugin. It generates the manifest and 
+This proved simple enough using the VitePWA plugin. It generates the manifest and 
 the worker (using workerbox under the hood) based on a clear config:
 
 ```TypeScript
@@ -120,8 +121,8 @@ export default defineConfig({
 ```
 
 This led me to discover the `public` directory where media is stored
-and add it to repo.
-I alos dded a short `sw.js` file to get set the strategy for the PWA's
+and add it to the repo.
+I also added a short `sw.js` file to get set the strategy for the PWA's
 service worker:
 
 ```javascript
@@ -144,12 +145,12 @@ and not an old browser cached version.
 with tags to load the generated assets.
 
 I found the build process to be more rigid and code that was working fine with 
-`vite` failed `vite build`. I had an issue with the TOML pacakge Terminal7 uses
+`vite`, failed `vite build`. I had an issue with the TOML pacakge Terminal7 uses
 to parse the configuration. It was written for node only and has access to `global`
 which only works in nodejs. 
 
 So I replaced the TOML package with a more popular & active one `@ltd/j-toml`
-This packaged required another tweak in the config.
+This package required another tweak in the config.
 j-toml uses BigInt which are not available on older
  platforms. Terminal7 is not for legacy platforms so I added a key to 
 vite config:
@@ -164,8 +165,8 @@ export default defineConfig({
 ```
 
 rollup also complained about the image map resizer function I copied from
-David Bradshaw :beeers:
-I removed some ancient compatability code and added an export line to make it
+David Bradshaw :beers:
+I removed some ancient compatibility code and added an export line to make it
 play nice with ESM
 
 ```javascript
@@ -175,17 +176,18 @@ export const imageMapResizer = factory()
 
 ## vitest to the rescue
 
-Now that the project was building it was time to run the tests.
+Now that the project was building, it was time to run the tests.
 Terminal7 used Karma for browser control, mocha for test runner and
 chai for assertions. It was tied to webpack with the karma-webpack 
-plugin. Tests where slow and configuration files massive and now the
-WebPack is gone, I realy had no choice.
+plugin. Tests were slow and configuration files massive and now that
+WebPack is gone, I really had no choice.
 
 I decided to try `vitest` and I wasn't disappointed. 
 vitest includes the mocha & chai interface so the testing suite 
-didn't ahve to change. I only had to change some
+didn't have to change. I only had to change some
 of the testing infrastructure, creating a Terminal7 mock.
-It was a small price to pay as I endded up saving 9 dependecies:
+It was a small price to pay as I ended up saving 9 dependencies:
+
 
 ```diff
 -    "karma": "^6.3.2",
@@ -203,12 +205,12 @@ It was a small price to pay as I endded up saving 9 dependecies:
 +    "vitest": "^0.5.9",
 ```
 
-jsdom provides a double for the borwser's dom interface.
+jsdom provides a double for the browser's dom interface.
 
 ## Mocking
 
 Losing the browser and running using `jsdom` broke xtermjs.
-It uses fancy canvas support and jsdom provide just
+It uses fancy canvas support and jsdom provides just
 the basic interface. vitest had great mocking support.  
 To mock a global package you have to add at the top of the testing suite:
 
@@ -222,7 +224,7 @@ define('session', async function() {
 ```
 
 `vi.mock` send vitest to look for `./__mock__/xterm.ts`
-If the file is missing vitest will magicely create a package double for
+If the file is missing vitest will magically create a package double for
 you. This double will run the package code and add spying as done
 in jest. Spying let's us ensure the unit under test calls the package
 methods and validate arguments.
@@ -263,14 +265,14 @@ expect(pane.terminal.focus
 ...
 ```
 
-To mock asynchrounous methods such as `loadWebfontAndOpen` I use setTimout with 0
+To mock asynchronous methods such as `loadWebfontAndOpen` I use setTimeout with 0
 for an interval. This waits for the current
 execution thread to finish before resolving the promise. It adds nothing to test
 time and results in a running order that emulates network latencies.
 
 ## updating the `scripts`
 
-Eventually I dug myself of all those rabbit holes and got the test to pass.
+Eventually I dug myself out of all those rabbit holes and got the test to pass.
 Now it was time to update `package.json` `scripts` key to use the new tooling:
 
 ```json
@@ -293,7 +295,7 @@ Now it was time to update `package.json` `scripts` key to use the new tooling:
 
 Now I was ready to write a mock for the new 
 session layer and refactor Terminal7 to use it. 
-`vi.mock()` supports local files, sending vitest to look for a the mocksubfolder
+`vi.mock()` supports local files, sending vitest to look for a the mock subfolder
 in the source module directory. As the module I was mocking was at 
 `src/sshsession.ts` the mock was at `src/__mock__/sshsession.ts`.
 
@@ -376,10 +378,10 @@ It took the better part of two weeks, but it was worth it
 Terminal7 now enjoys a more descriptive TypeScript, an ultra-fast development
 server and test runner.
 The dev environment has less dependencies and configuration files are slick.
-In the process I gathered a better perspective of the yacks I still have to shave
+In the process I gathered a better perspective of the yaks I still have to shave
 and debt I need to clear.
 
 It wasn't painless and I suspect that like
-all javascript tools of the past, vite will not age well. I'd recommend switching
-only for those project with good reasons - either before a deep refactor
+all js tools of the past, vite will not age well. I'd recommend switching
+only for those projecst with good reasons - either before a deep refactor
 or in the unfortunate event when contributors hate the current tools.
