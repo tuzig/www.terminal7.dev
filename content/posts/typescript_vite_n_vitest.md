@@ -7,7 +7,7 @@ date: 2022-03-28T10:24:49-03:00
 
 ### &nbsp;
 
-Spring is here and with it the yack shaving season.  It started a few weeks ago 
+Spring is here and so is the yak shaving season.  It started a few weeks ago 
 when the weather was still foul, I realized Terminal7 needs deep refactoring.
 It needs to support plain SSH and a few other communication paths:
 
@@ -32,7 +32,7 @@ Almost everything I needed to know is in the well written
 
 Thanks to just a few extensions, TypeScript made it possible
 to code the architecture for the new layer.
-As a base, I used the ssh RFC and libshh2 and their terms:
+As a base, I used the ssh RFC and libssh2 and their terms:
 sessions and channels.
 These became the `Session` and `Channel` interfaces.
 These are used by Terminal7's `Gate` for communications.
@@ -62,7 +62,7 @@ there are too many moving parts and the configuration is complex.
 
 ## Ditching WebPack
 
-A bit of research led me to vite & rollup as the rising stars in
+A bit of research led me to [vite](https://vitejs.dev) & [rollup](https://rollupjs.org) as the rising stars in
 jacvascript tooling skies. 
 vite is focused on the developers and leaves the build process to rollup.
 It does a great job of running a fast & updated local dev server.
@@ -182,7 +182,7 @@ chai for assertions. It was tied to webpack with the karma-webpack
 plugin. Tests were slow and configuration files massive and now that
 WebPack is gone, I really had no choice.
 
-I decided to try `vitest` and I wasn't disappointed. 
+I decided to try [vitest](https://vitest.dev) and I wasn't disappointed. 
 vitest includes the mocha & chai interface so the testing suite 
 didn't have to change. I only had to change some
 of the testing infrastructure, creating a Terminal7 mock.
