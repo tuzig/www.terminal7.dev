@@ -165,9 +165,8 @@ export default defineConfig({
 ```
 
 rollup also complained about the image map resizer function I copied from
-David Bradshaw :beers:
-I removed some ancient compatibility code and added an export line to make it
-play nice with ESM
+David Bradshaw :beers: so I removed some ancient compatibility code and added
+an export line to make it play nice with ESM
 
 ```javascript
 ...
