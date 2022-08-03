@@ -1,7 +1,7 @@
 hero:
   text: "To boldly go<br>where no terminal<br>has gone before"
   beta: true
-  betaLink: "https://pwa.terminal7.dev"
+  betaLink: "#beta"
 gestures:
   title: "Going to your Gestures"
   text: >
@@ -37,10 +37,6 @@ home:
     src: "/images/home-image.png"
     alt: "A network diagram showing a Terminl7 user connecting to different hosts"
 
-contact:
-  formAction: ""
-  buttonUrl: "https://testflight.apple.com/join/v3IIl1o2"
-
 beta:
-  title: "Join the Beta"
-  betaLink: "https://pwa.terminal7.dev"
+  formAction: ""
+  buttonUrl: "https://testflight.apple.com/join/u8uz7kDf"
