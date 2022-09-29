@@ -5,7 +5,7 @@ hero:
 gestures:
   title: "Going to your Gestures"
   text: >
-    Terminal7 is a next generation terminal. It includes a multiplexer for multiple
+    Terminal7 is an open source next generation terminal. It includes a multiplexer for multiple
     terminals on a screen and real time communications to tackle intenet
     weather. Based on WebRTC and inspired by tmux & screen Terminal7 supports:<br>
     <span class='padding-right-8'>•</span> Touch gestures<br>
