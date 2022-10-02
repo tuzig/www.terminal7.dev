@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="section section-hero-single">
+  <div class="hero-container container">
+    <div class="hero-box" >
+      <a href="{{ .Site.BaseURL }}">
+        <h1 class="hero-title"><img class="logo-icon" src="/images/logo-icon.png" alt=""><span class="">Terminal</span><span class="color-pink-flamingo">7</span> <span class="block-icon"></span></h1>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="section section-blog padding-y-64 margin-left-40 margin-right-8">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="display-flex flex-direction-column blog-box-single column-md-8 column-lg-8 padding-x-0">
+        <h4 class="display-flex align-items-center justify-content-space-between blog-post-header">
+          <span class="item-title font-family-courier-new display-inline-block padding-x-16 padding-y-8">{{ .Title }}</span>
+        </h4>
+        <div class="flex-grow-1 blog-box-content">
+          <div class="blog-box-content-text">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
