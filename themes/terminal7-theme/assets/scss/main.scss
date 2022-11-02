@@ -57,6 +57,10 @@ pre {
 code {
     line-height: 1.4;
     font-weight: 500;
+    font-family: monospace;
+    background-color: black;
+    padding: 0 0.5em;
+    white-space: nowrap;
 }
 .menu-nav {
   position: relative;
