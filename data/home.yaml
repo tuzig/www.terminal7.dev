@@ -1,7 +1,6 @@
 hero:
   text: "To boldly go<br>where no terminal<br>has gone before"
-  beta: true
-  betaLink: "#beta"
+  appUrl: "https://apps.apple.com/il/app/terminal7/id1532882447"
 gestures:
   title: "Going to your Gestures"
   text: >

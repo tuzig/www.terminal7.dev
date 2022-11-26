@@ -15,9 +15,11 @@
     {{ partial "sections/features-home.html" . }}
   {{ end }}
 
+  {{/* Uncomment when we can defocus from the iPad
   {{ with .Site.Data.home.beta }}
     {{ partial "sections/beta.html" . }}
   {{ end }}
+  */}}
 
   {{ partial "sections/blog.html" . }}
 {{ end }}
