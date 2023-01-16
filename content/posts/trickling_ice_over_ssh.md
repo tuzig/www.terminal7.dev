@@ -1,5 +1,5 @@
 ---
-title: "Trickling ICE over WebRTC"
+title: "Trickling ICE over SSH"
 date: 2023-01-16T01:24:49-03:00
 ---
 
@@ -43,5 +43,3 @@ and the hybrid session uses the WebRTC session.
 Coding this feature made me realize WebRTC weirdness has its benefits.
 Sure, you need to learn a complex API but then it's pretty simple
 to get WebRTC to dance with any protocol, even SSH.
-
-
