@@ -85,10 +85,34 @@
         font-size: 64px;
       }
 
-      @media (min-width: 1400px) { 
-
-      }
     }
+    .hero-live {
+      // vertical align element to the middle
+      position: absolute;
+      right: 4%;
+      width: 8%;
+      bottom: -14px;
+      font-size: 12px;
+      line-height: 1.2;
+      p {
+          top: 50%;
+          transform: translateY(-50%);
+      }
+      @media (min-width: 768px) {
+        font-size: 14px;
+        bottom: -34px;
+      }
+
+      @media (min-width: 992px) { 
+        font-size: 16px;
+        bottom: -19px;
+      }
+
+      @media (min-width: 1200px) { 
+        font-size: 20px;
+        bottom: -24px;
+          }
+      }
   }
 }
 
