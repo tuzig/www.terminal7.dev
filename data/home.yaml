@@ -9,6 +9,7 @@ gestures:
     weather. Based on WebRTC and inspired by tmux & screen Terminal7 supports:<br>
     <span class='padding-right-8'>•</span> Touch gestures<br>
     <span class='padding-right-8'>•</span> Long living layouts<br>
+    <span class='padding-right-8'>•</span> Live camera feed in a pane<br>
     <span class='padding-right-8'>•</span> Per pane font size<br>
   vimeo: "784027817"
 
@@ -27,11 +28,11 @@ web:
 home:
   title: "Going to your Home"
   text: >
-    Terminal7 comes with an address book and signaling service - peerbook.io .
-    It includes web socket signalling server that speeds up connection time and
-    extends Terminal7's reach to dynamic IP server and behind-the-NAT. 
-    With peerbook you can use your desktop or Raspberry Pi
-    and save on hosting costs.
+    Terminal7 comes with a signaling service - peerbook.io .
+    It's a websocket signalling server that 
+    extends Terminal7's reach to ephemeral IPs and behind-the-NAT servers. 
+    <br>
+    To join peerbook's beta please check out its site.
   image:
     src: "/images/home-image.png"
     alt: "A network diagram showing a Terminl7 user connecting to different hosts"
