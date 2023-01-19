@@ -21,6 +21,8 @@ WebRTC, including WebSocket, Jingle, and XMPP. Each has its own strengths and
 weaknesses, and I choose to develop a web socket signalling server.
 Once I had the server running, I realized I needed something more basic.
 
+![Sequence diagram of trickle ICE over SSH](/images/trickleice.jpeg)
+
 My users use SSH to connect to their servers and I don't want to change that so
 I decided to use it for signaling.
 To support it, I've added a server command and a hybrid session that start with
