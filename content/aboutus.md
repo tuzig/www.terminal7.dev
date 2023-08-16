@@ -6,14 +6,14 @@ layout: "privacy"
 
 ## About Us
 
-We believe in the Terminal and in Open Source and we're
-working together as an independent bootstrap
+We believe in the Terminal and in Open Source communities
+and we're working together as an independent bootstrap
 not looking for investors nor exits.
 
 Our revenue will come from selling Terminal7 subscriptions. 
 First one is an online service - peerbook.io - that lets Terminal7
 run over WebRTC and enjoy its many benefits. 
-
+ 
 ### Team
 
 > **Benny Daon** - Benny is a passionate programmer since the 8bit days.
