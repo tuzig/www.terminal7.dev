@@ -21,6 +21,11 @@ enableemoji = true
 
 [menu]
   [[menu.main]]
+    name = "about us"
+    url = "/aboutus"
+    weight = 100
+
+  [[menu.main]]
     name = "github"
     url = "https://github.com/tuzig/terminal7"
     weight = 100
