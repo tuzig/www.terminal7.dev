@@ -7,13 +7,13 @@ layout: "privacy"
 ## About Us
 
 We believe in the Terminal and in Open Source communities
-and we're working together as an independent bootstrap
+and we're working together as an independent workshop
 not looking for investors nor exits.
 
-Our revenue will come from selling Terminal7 subscriptions. 
+Our revenue comes from selling Terminal7 subscriptions.
 First one is an online service - peerbook.io - that lets Terminal7
-run over WebRTC and enjoy its many benefits. 
- 
+run over WebRTC and enjoy its many benefits.
+
 ### Team
 
 > **Benny Daon** - Benny is a passionate programmer since the 8bit days.
@@ -26,10 +26,9 @@ run over WebRTC and enjoy its many benefits.
 
 > **Alex Rozenfarb** - Alex has been promoting apps, companies and organizations 
 > on-line for over a decade. Lately, Alex has been focused on influencers
-> and sponsorships. 
+> and sponsorships.
 > 
 
 > **Eyal Sasson** - Eyal is an intern who joined us to learn programming and in less
 > than a year become a highly productive developer. Eyal led the development
 > of the Android version and most of the TWR CLI.
-
