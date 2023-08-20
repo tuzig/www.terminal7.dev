@@ -3,7 +3,7 @@
 ## Our History
 
 Terminal7 started as Benny's COVID project. Benny loved his iPad Pro, but the
-terminal apps were becoming a pain. Realizing that a tablet-based terminal needs
+terminal apps were not up to par. Realizing that a tablet-based terminal needs
 a revised architecture, he started Terminal7.
 
 ## Our Mission
