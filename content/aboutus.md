@@ -1,4 +1,8 @@
---- title: "About Us" date: 2023-08-01T01:49:39+03:00 layout: "privacy" ---
+---
+title: "About Us"
+date: 2023-08-01T01:49:39+03:00
+layout: "privacy"
+---
 
 ## Our History
 
