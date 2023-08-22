@@ -1,6 +1,7 @@
 hero:
   text: "To boldly go<br>where no terminal<br>has gone before"
-  appUrl: "https://apps.apple.com/il/app/terminal7/id1532882447"
+  appStoreUrl: "https://apps.apple.com/il/app/terminal7/id1532882447"
+  playStoreUrl: "https://play.google.com/store/apps/details?id=dev.terminal7"
 gestures:
   title: "Going to your Gestures"
   text: >
