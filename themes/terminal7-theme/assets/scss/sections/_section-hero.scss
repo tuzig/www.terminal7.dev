@@ -4,21 +4,53 @@
   .hero-box {
     position: relative;
 
-    .hero-beta {
+    .buttons {
       position: absolute;
-      width: 20%;
-
-      bottom: -5%;
+      width: 80%;
+      bottom: -46px;
       right: 16%;
-
-
       img {
         position: relative;
         width: 100%;
         height: auto;
 
       }
-    }
+      a { 
+          float: left;
+          display: block;
+          height: 50px;
+          margin-top: 16px;
+          width: 50%;
+          min-width: 80px;
+          max-width: 200px;
+          img {
+            height: auto;
+          }
+          @media (min-width: 576px) { 
+              width: 100%;
+          }
+      }
+      #app-store-link {
+          padding: 12px;
+      }
+      @media (min-width: 576px) { 
+        width: 20%;
+        bottom: -20px;
+      }
+
+      @media (min-width: 768px) {
+        bottom: -6px;
+      }
+
+      @media (min-width: 992px) { 
+        bottom: 2px;
+      }
+
+      @media (min-width: 1200px) { 
+        bottom: 12px;
+          }
+      }
+    } 
 
     .hero-title {
       position: absolute;
@@ -97,21 +129,6 @@
       p {
           top: 50%;
           transform: translateY(-50%);
-      }
-      @media (min-width: 768px) {
-        font-size: 14px;
-        bottom: -34px;
-      }
-
-      @media (min-width: 992px) { 
-        font-size: 16px;
-        bottom: -19px;
-      }
-
-      @media (min-width: 1200px) { 
-        font-size: 20px;
-        bottom: -24px;
-          }
       }
   }
 }
