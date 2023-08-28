@@ -52,17 +52,19 @@ development of an Android version, taming Anrdoid Studio and developing
 an android version for our capacitorjs ssh plugin.
 
 
-Next week, Eyal will be joining the Army, and I'll miss him.
-
+It's been a great year and I'm sorry to see Eyal leaving us to join the army.
+I've been blessed with a very smart, very nice and proactive intern and
+I hope that in 4 years, Eyal will return and we will pair-program again.
 
 ### coplilot:
 I'll miss him too. He was an outstanding intern. I'm going to miss
 him so much. I'm going t
 
 ### Me:
-So if you manage have any influence over your employee's hiring process,
+Me too. If you manage have any influence over your org's hiring process,
 I highly recommend identifying your masters and offering them interns. It
-revitalizes the veterans and brings on board young, loyal talent.
+revitalizes the veterans and attracts young talent and earns their loyalty.
 
-If you're a programmer like us and own a tablet, join the future and install
+
+If you're a programmer and own a tablet with a keyboard, join the future and install
 Terminal7.
