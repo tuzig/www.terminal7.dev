@@ -33,8 +33,8 @@ increase in salary, no additional responsibilities, no extra respect, power, or
 influence. Nothing.
 
 ### Me:
-I'm not entirely convinced it's that dismal, but from numerous
-conversations with senior developers, it seems to wear us down. We grow tired of
+It's not that bad, but from numerous conversations I had with senior developers,
+it does wear us down. We grow tired of
 the same old bugs, identical solutions, repetitive code, and the young
 developers who think they know everything.
 
@@ -43,21 +43,26 @@ Indeed, we grow weary of the routine meetings, never-changing
 deadlines, unchanging managers, and customers who believe they know everything.
 
 ### Me:
-To combat my low energy levels, I found the cure in taking on an intern,
-Eyal, and rekindling my passion for programming. Next week, Eyal will be joining
-the Army, and I'll miss him. His questions pushed me to delve deeper and
+To replenish my energy, I took an intern,
+Eyal,  and the experience has been great. Eyal rekindled my passion for programming.
+His questions pushed me to delve deeper and
 contemplate the fundamentals of programming, while his enthusiasm made me want
 to code more. Not only that, but Eyal made significant contributions and led the
-development of an Android version, including a capacitorjs ssh plugin.
+development of an Android version, taming Anrdoid Studio and developing
+an android version for our capacitorjs ssh plugin.
+
+
+Next week, Eyal will be joining the Army, and I'll miss him.
+
 
 ### coplilot:
 I'll miss him too. He was an outstanding intern. I'm going to miss
 him so much. I'm going t
 
 ### Me:
-If you manage an R&D team or have any influence over the hiring process,
-I highly recommend identifying your experts and offering them interns. It not
-only revitalizes them but also allows you to hire young, loyal talent.
+So if you manage have any influence over your employee's hiring process,
+I highly recommend identifying your masters and offering them interns. It
+revitalizes the veterans and brings on board young, loyal talent.
 
 If you're a programmer like us and own a tablet, join the future and install
 Terminal7.
