@@ -3,7 +3,10 @@
     <div class="hero-box" >
       <img class="width-100" src="/images/wire.png" alt="Wire Image">
       <div class="buttons">
-          <a href='{{ .playStoreUrl }}'>
+        <a href='{{ .PWAUrl }}'>
+           <img alt='launch as a web app' src='/images/launch_as_web_app.svg' />
+        </a>
+        <a style="padding: 0" href='{{ .playStoreUrl }}'>
            <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
         </a>
         <a id="app-store-link" href="{{ .appStoreUrl }}">
