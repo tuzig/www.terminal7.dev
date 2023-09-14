@@ -1,6 +1,6 @@
 ---
 title: "Version 1.8: Web version and synced clients"
-date: 2023-08-28T01:24:49-03:00
+date: 2023-09-14T01:24:49-03:00
 ---
 
 
