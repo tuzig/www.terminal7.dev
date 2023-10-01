@@ -7,7 +7,7 @@ gestures:
   title: "Going to your Gestures"
   text: >
     Terminal7 is an open source next generation terminal. It includes a multiplexer for multiple
-    terminals on a screen and real time communications to tackle intenet
+    terminals on a screen and real time communications to tackle bad internet
     weather. Based on WebRTC and inspired by tmux & screen Terminal7 supports:<br>
     <span class='padding-right-8'>•</span> Touch gestures<br>
     <span class='padding-right-8'>•</span> Long living layouts<br>
@@ -21,7 +21,7 @@ web:
     Terminal7 uses WebRTC's data channels to send
     keystrokes and stream output. Part of the W3C
     standard, data channels use IETF's SCTP & DTLS for
-    performace and security.
+    performance and security.
   image:
     src: "/images/web-image.png"
     alt: "A layer cake of the protocls we use, layers 4- "
@@ -30,11 +30,11 @@ web:
 home:
   title: "Going to your Home"
   text: >
-    Terminal7 comes with a signaling service - peerbook.io .
-    It's a websocket signalling server that 
-    extends Terminal7's reach to ephemeral IPs and behind-the-NAT servers. 
+    Terminal7 has an optional online service - peerbook.
+    It's a signalling server  and a world-wide network of relay servers (TURN) that
+    extends Terminal7's reach to behind-the-NAT servers.
     <br>
-    To join peerbook's beta please check out its site.
+    peerbook is offered as a paid subscription for ~$30 a year with a month's trial 
   image:
     src: "/images/home-image.png"
     alt: "A network diagram showing a Terminl7 user connecting to different hosts"

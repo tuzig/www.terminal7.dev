@@ -7,7 +7,7 @@ date: 2023-01-16T01:24:49-03:00
 WebRTC is a weird protocol. It's a monster made from over 30 RFCs 
 that can carry real time video, audio and data. Still,
 it can't establish a connection on its own. It counts
-on the app to provide a singaling service that passes ICE
+on the app to provide a signaling service that passes ICE
 candidates between the peers.
 
 In a WebRTC apps, ICE is used to discover the best path for sending data
