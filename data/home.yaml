@@ -31,7 +31,7 @@ home:
   title: "Going to your Home"
   text: >
     Terminal7 has an optional online service - peerbook.
-    It's a signalling server  and a world-wide network of relay servers (TURN) that
+    It's a signaling server and a world-wide network of relay servers (TURN) that
     extends Terminal7's reach to behind-the-NAT servers.
     <br>
     peerbook is offered as a paid subscription for ~$30 a year with a month's trial 
