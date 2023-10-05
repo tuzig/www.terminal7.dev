@@ -61,9 +61,7 @@ code {
     line-height: 1.4;
     font-weight: 500;
     font-family: monospace;
-    background-color: black;
-    padding: 0 0.5em;
-    white-space: nowrap;
+    white-space: pre-line;
 }
 .menu-nav {
   position: relative;
@@ -107,4 +105,14 @@ code {
     text-decoration: underline;
 }
 
-
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0 0 1.75em 0;
+    padding: 0 0 0 1.75em;
+    border-left: 0.5em solid #00FAFA;
+    color: #00FAFA;
+}
+.line { display: block; }
