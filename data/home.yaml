@@ -4,9 +4,9 @@ hero:
   playStoreUrl: "https://play.google.com/store/apps/details?id=dev.terminal7"
   PWAUrl: "https://pwa.terminal7.dev"
 gestures:
-  title: Next Generation Terminal
+  title: A Next Generation Terminal
   text: >
-    Welcome to Terminal7, an open source terminal app
+    Welcome to Terminal7 - an open source terminal app
     for the new era of Personal Computing.
     Terminal7 is a reincarnation of tmux based on a novel architecture with
     a rich client, a simple server and secure, real time communications.
@@ -24,7 +24,9 @@ web:
     Terminal7 uses WebRTC's data channels to send
     keystrokes and stream output. Part of the W3C
     standard, data channels use IETF's SCTP & DTLS for
-    performance and security.
+    performance, security and reach. With T7 you can access
+    your servers from any approved browser, seamlessly switching from a deskop
+    to the mobile and vice-versa.
   image:
     src: "/images/web-image.png"
     alt: "A layer cake of the protocls we use, layers 4- "
@@ -36,8 +38,7 @@ home:
     WebRTC is great, but it requires a signalling server to estalish sessions and go behind-the-NAT.
     In ~15% of the cases it also requires a relay server as "NAT hole punching"
     fails. Terminal7 PeerBook subscription gives you all that and a 2FA protected
-    address book of clients & servers.<br/>
-    Our a world-wide network of relay (TURN) servers is provided by Twilio. 
+    address book of clients & servers.
   image:
     src: "/images/home-image.png"
     alt: "A network diagram showing a Terminl7 user connecting to different hosts"
