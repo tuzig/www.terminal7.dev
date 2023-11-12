@@ -4,18 +4,18 @@ hero:
   playStoreUrl: "https://play.google.com/store/apps/details?id=dev.terminal7"
   PWAUrl: "https://pwa.terminal7.dev"
 gestures:
-  title: A Terminal Multiplexer Reincarnation
+  title: Next Generation Terminal
   text: >
-    Welcome to Terminal7, a terminal app
+    Welcome to Terminal7, an open source terminal app
     for the new era of Personal Computing.
-    At its core, Terminal7 is a reincarnation of tmux based on a novel architecture with
-    a rich client, a simple server and secure and real time communications.
-    Here are the key additions:<br/>
+    Terminal7 is a reincarnation of tmux based on a novel architecture with
+    a rich client, a simple server and secure, real time communications.
+    <br/>Hers are its key additions:<br/>
     <span class='padding-right-8'>•</span> WebRTC for secure UDP based protocol<br>
     <span class='padding-right-8'>•</span> Local scroll & copy-mode<br>
     <span class='padding-right-8'>•</span> Touch gestures for easiest layout control<br>
     <span class='padding-right-8'>•</span> Per pane font size for small logs & large code<br>
-    <span class='padding-right-8'>•</span> Live camera feed in a pane<br>
+    <span class='padding-right-8'>•</span> Live camera feed for conferencing & recording<br>
   vimeo: "793301285"
 
 web:
@@ -35,9 +35,9 @@ home:
   text: >
     WebRTC is great, but it requires a signalling server to estalish sessions and go behind-the-NAT.
     In ~15% of the cases it also requires a relay server as "NAT hole punching"
-    fails. Terminal7 PeerBook subscription gives you all that and an 2FA protected
-    address book of clients & servers. Our a world-wide network of relay servers (TURN) is provided
-    by Twilio. 
+    fails. Terminal7 PeerBook subscription gives you all that and a 2FA protected
+    address book of clients & servers.<br/>
+    Our a world-wide network of relay (TURN) servers is provided by Twilio. 
   image:
     src: "/images/home-image.png"
     alt: "A network diagram showing a Terminl7 user connecting to different hosts"
