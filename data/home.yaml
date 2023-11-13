@@ -10,7 +10,7 @@ gestures:
     for the new era of Personal Computing.
     Terminal7 is a reincarnation of tmux based on a novel architecture of
     a rich client, a simple server and secure, real time communications.
-    <br/>Key additions include:<br/>
+    Key additions include:<br/>
     <span class='padding-right-8'>•</span> WebRTC for secure UDP based protocol<br>
     <span class='padding-right-8'>•</span> Local scroll & copy-mode<br>
     <span class='padding-right-8'>•</span> Touch gestures for intuitive layout control<br>
