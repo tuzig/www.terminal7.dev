@@ -4,6 +4,9 @@
   .hero-box {
     position: relative;
 
+    .logo-text {
+        font-family: 'Fira Code', monospace;
+    }
     .buttons {
       position: absolute;
       bottom: -70px;
@@ -14,7 +17,7 @@
 
       }
       a { 
-          padding: 2vw 12px;
+          padding: 12px 2vw;
           float: left;
           display: block;
           margin-top: 16px;
@@ -98,7 +101,7 @@
       bottom: 10%;
       left: 10%;
 
-      font-size: 24px;
+      font-size: 20px;
 
       @media (min-width: 576px) { 
         font-size: 30px;
