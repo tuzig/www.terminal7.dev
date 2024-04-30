@@ -26,6 +26,8 @@ for REPO in $REPOS; do
   done
 done
 
+#  create the AUTHORS_FILE directory
+mkdir -p $(dirname $AUTHORS_FILE)
 # Generate the HTML snippet
 echo "<ul class='authors'>" > $AUTHORS_FILE
 for CONTRIBUTOR in "${!CONTRIBUTORS[@]}"; do
