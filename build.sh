@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Set the GitHub organization name
 ORG_NAME='tuzig'
