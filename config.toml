@@ -39,3 +39,6 @@ enableemoji = true
     name = "twitter"
     url = "https://twitter.com/7terminal"
     weight = 300
+[markup]
+  [markup.highkight]
+    noClasses = true
