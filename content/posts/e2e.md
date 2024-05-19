@@ -21,6 +21,8 @@ In terminal7 repo we have black box tests based on docker compose.
 These tests are more complete and use compose to setup a virtual lab with the required services.
 We use playwright as the test runner and it too is containerized.
 
+![Virtaul lab topology](/images/vlab.jpeg)
+
 The bash script the runs the tests supports multiple labs each with multiple testing suite.
 In our most complex lab, we have seven containers:
 playwright, simple web server (a test double for https://pwa.terminal7.dev), webexec, peerbook, redis, smtp and a revenuecat double.
