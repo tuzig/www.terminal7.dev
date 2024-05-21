@@ -3,7 +3,7 @@ title: "testcontainers vs. docker compose"
 date: 2024-05-09T10:24:49-03:00
 ---
 
-As Terminal7 includes three main programs, changes can get complicated.
+As Terminal7 includes three main components, changes can get complicated.
 When a change encompasses more than one program, we tread carefully,
 using tests to separate concerns and break down the work.
 
@@ -17,7 +17,7 @@ but they are faster as they require less setup.
 In webexec case, we use Go built-in testing and a WebRTC test client to
 ensure webexec is adhering to its contract.
 
-In terminal7 repo we have black box tests based on docker compose.
+In T7 repo we have black box tests based on docker compose.
 These tests are more complete and use compose to setup a virtual lab with the required services.
 We use playwright as the test runner and it too is containerized.
 
