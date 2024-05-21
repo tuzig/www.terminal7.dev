@@ -6,6 +6,14 @@ AUTHORS_FILE='./layouts/shortcodes/authors.html'
 
 # Get a list of repositories for the organization
 REPOS=$(curl -s -H "Authorization: token $GH_TOKEN" "https://api.github.com/orgs/$ORG_NAME/repos?type=sources" | jq -r '.[].full_name')
+if [[ $? -ne 0 ]]; then
+  echo "Failed to fetch repositories. Is GH_TOKEN valid?"
+  exit 1
+fi
+if [[ -z $REPOS ]]; then
+  echo "No repositories found."
+  exit 2
+fi
 
 # Initialize an empty array to store unique contributors
 declare -A CONTRIBUTORS
