@@ -102,16 +102,14 @@ so I had to feed the LLaMa source code ask for help:
 ```bash
 $ find . -type f -name "*.toml" -o -name "*.html" -o -name "*.md" -print0 \
 | xargs -0 -I{} sh -c 'echo "## {}" ; cat {}' \
-| cat <(echo "How do we add text to the home page of the gokarna based site that follows?") -\
-| llm
+| llm "How do we add text to the home page of the gokarna based site that follows?"
 
 ```
 
-This 4 step pipeline that does:
+This 3 step pipeline that does:
 - use `find` to get all the important files in the directory. `-print0` gets the output in a format that can be used by `xargs`
 - use `xargs` to print the file name and content for each file
-- use `cat` to add a prompt to the beginning of the output
-- use `llm` to send the output to the LLaMa
+- use `llm` to pipe the output to the LLaMa and include the task
 
 ### response
 
