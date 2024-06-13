@@ -28,28 +28,32 @@
           list-style: disc;
           line-height: 1.5em;
           padding-left: 2em;
+          margin-bottom: 16px; 
       }
   
       h1 {
-          font-size: 140%;
+          font-size: 1.8em;
           font-weight: 500;
           padding-bottom: 1em;
       }
       h2 {
-          font-size: 120%;
+          font-size: 1.5em;
           font-weight: 500;
-          padding-bottom: 0.5em;
+          padding-bottom: 0.8em;
       }
       h3 {
-          font-size: 110%;
+          font-size: 1.3em;
           font-weight: 500;
-          padding-bottom: 0.3em;
+          padding-bottom: 0.6em;
       }
       .tldr {
           font-size: 110%;
           font-weight: 500;
           padding-bottom: 0.3em;
       }
+      code { background-color: #272822; padding: 0 5px; }
+      ol { padding-left: 1em; list-style: decimal; }
+      
     }
 
   .section-blog-item {
