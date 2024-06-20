@@ -183,7 +183,9 @@ Time to go back the LLaMa and direct it at the theme to get a better answer:
 
 
 ```bash
-$ llm -c "Are you sure gokarna has support for customCSS? please review the gokarna theme sources I gave you early on and check if it's the right way to add a custom css file"
+$ llm -c "Are you sure gokarna has support for customCSS? \
+    please review the gokarna theme sources I gave you early on \
+    and check if it's the right way to add a custom css file"
 
 ```
 
@@ -290,8 +292,6 @@ It was a task Hugo got covered later in the first response:
    - You can then deploy the contents of the `public` directory to your web hosting provider or use platforms like GitHub Pages or Netlify for easy deployment.
 
 That's it! You now have a basic static site generated using Hugo. You can further customize your site by modifying the theme, adding more content, and configuring additional settings in the `config.toml` file.
-
----
 
 ## It worked!
 
