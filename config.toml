@@ -42,3 +42,7 @@ enableemoji = true
 [markup]
   [markup.highkight]
     noClasses = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
