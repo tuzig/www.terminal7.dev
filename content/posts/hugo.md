@@ -1,6 +1,7 @@
 ---
 title: "Static Site Generation with Hugo and LLaMa"
 date: 2024-06-10T12:33:12+03:00
+draft: true
 ---
 
 Setting up static sites and weblogs has been a chore that's been  hunting me since the last millennium.
