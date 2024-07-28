@@ -37,16 +37,15 @@ It was down to either authenticating the websockets or replacing it with WebRTC.
 We choose to replace it as having double authentication will surely lead to hell.
 Why complicate things when WebRTC fingerprints serve us so well?
 
-My plan was to add an HTTP WebRTC server to peerbook complete with management commands
+The plan was to add an HTTP WebRTC server to peerbook complete with management commands
 to allow the client to verify, edit, delete, register, ping, offer and forward candidates. 
 Some commands require a One Time Password, some require a target and some require both.
-peerbook peeks inside the connection candidates to identify and authenticate the peer. 
+To identify and authenticate peers, peerbook peeks inside the connection candidates.
 
 We already have similar code - at the back-end (aka webexec) -
 and we refactored it to a stand alone library. A library with a configurable authentication back-end that can serve as the HTTP based magic for both webexec and peerbook.
 The protocol this HTTP server was using is simple and pre-dated the WHIP standard.
-It was non standard and had to be refactored now that the standard was out.
-The [WHIP RFC](https://datatracker.ietf.org/doc/draft-ietf-wish-whip/) specs out the signaling magic for cases when one of the peers can spin an HTTP server - exactly our use case.
+It was non standard and had to be refactored.
 
 
 ## Validation
@@ -55,25 +54,24 @@ Like all plans, it needed validation so I went back to the wizards.
 The chief pion liked it and suggested I look at the [WHIP RFC](https://datatracker.ietf.org/doc/draft-ietf-wish-whip/) and at ICETCP server to ensure connectivity.
 The [github.com/pion/webrtc](https://github.com/pion/webrtc) library already had all the needed magic. All I needed was to add a TCP listener and add these lines of code:
 ```go
-	var settingEngine webrtc.SettingEngine
+    var settingEngine webrtc.SettingEngine
 
     ICETCPListener, err := net.Listen("tcp", &addr)
-	tcpMux := webrtc.NewICETCPMux(nil, ICETCPListener, 8)
+    tcpMux := webrtc.NewICETCPMux(nil, ICETCPListener, 8)
 
-	settingEngine.SetNetworkTypes([]webrtc.NetworkType{
-		webrtc.NetworkTypeTCP4,
-		webrtc.NetworkTypeTCP6,
-	})
-	settingEngine.SetICETCPMux(tcpMux)
-	api := webrtc.NewAPI(webrtc.WithSettingEngine(settingEngine))
+    settingEngine.SetNetworkTypes([]webrtc.NetworkType{
+        webrtc.NetworkTypeTCP4,
+        webrtc.NetworkTypeTCP6,
+    })
+    settingEngine.SetICETCPMux(tcpMux)
+    api := webrtc.NewAPI(webrtc.WithSettingEngine(settingEngine))
 ```
 
-The first paragraph of code setups the ICETCP listener. Clients will access it at connection time to discover their true address.
+The first paragraph of code setups the ICETCP listener clients will access at connection time to discover their true address.
 The second paragraph connects the server with the webrtc library so the server's address is included in all answers.
 
 ## Enter The LLaMa
 
-With that out of the way I could focus on refactoring the HTTP server.
 The WHIP RFC was a great read. It's a simple protocol that defines how to establish a WebRTC connection over HTTP. It uses POST and PATCH requests to exchange connection offers and candidates and establish a connection.
 
 As the protocol is well defined and simple it was a great opportunity to get a LLaMa involved.
@@ -85,7 +83,7 @@ I broke it down to four steps:
 - Use these tests to get the LLaMa to write  the server code.
 - Construct client code based on the API reference.
 
-It wasn't cost effective. I invested a lot of time finding the right prompt and experimenting. For example, what verb is best for the llama? program | code | write | craft | author ?
+In the short term, it wasn't cost effective. I invested a lot of time finding the right prompt and experimenting. For example, what verb is best for the llama? program | code | write | craft | author ?
 I discovered that just like the IRL llamas, they can be very stubborn.
 Getting the output right often felt like trying to hold a llama's feet to fire while it keeps kicking and kicking.
 
