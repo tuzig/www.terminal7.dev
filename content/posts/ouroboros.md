@@ -52,23 +52,23 @@ It was non standard and had to be refactored.
 
 Like all plans, it needed validation so I went back to the wizards.
 The chief pion liked it and suggested I look at the [WHIP RFC](https://datatracker.ietf.org/doc/draft-ietf-wish-whip/) and at ICETCP server to ensure connectivity.
-The [github.com/pion/webrtc](https://github.com/pion/webrtc) library already had all the needed magic. All I needed was to add a TCP listener and add these lines of code:
+The [github.com/pion/webrtc](https://github.com/pion/webrtc) library already had all the needed magic:
+
+```go
+    ICETCPListener, err := net.Listen("tcp", addr)
+    tcpMux := webrtc.NewICETCPMux(nil, ICETCPListener, 8)
+```
+
+These two lines starts an ICETCP listner on `addr`. Next the details of this server are added to the webrtc API:
+
 ```go
     var settingEngine webrtc.SettingEngine
 
-    ICETCPListener, err := net.Listen("tcp", &addr)
-    tcpMux := webrtc.NewICETCPMux(nil, ICETCPListener, 8)
-
-    settingEngine.SetNetworkTypes([]webrtc.NetworkType{
-        webrtc.NetworkTypeTCP4,
-        webrtc.NetworkTypeTCP6,
-    })
     settingEngine.SetICETCPMux(tcpMux)
     api := webrtc.NewAPI(webrtc.WithSettingEngine(settingEngine))
 ```
 
-The first paragraph of code setups the ICETCP listener clients will access at connection time to discover their true address.
-The second paragraph connects the server with the webrtc library so the server's address is included in all answers.
+Using `api` will include the ICETCP server's address in all answers.
 
 ## Enter The LLaMa
 
