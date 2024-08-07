@@ -3,7 +3,8 @@ title: "Making WebRTC eat its tail"
 date: 2024-07-24T10:24:49-03:00
 ---
 
-[Edit: 2024-07-28 Addinng second visits to the wizrds and a new server]
+[Edit: 2024-08-07 Addinng the second visit to the wizrds and some code]
+
 ## Learning New Magic
 WebRTC is a weird protocol. On one hand, it has the power to connect to every device on the network and stream video, audio and data.
 On the other, it's incomplete. It depends on "magic" - an unspecified signaling server that teleports connection candidates between the peers until a connection is made.
@@ -59,11 +60,14 @@ The [github.com/pion/webrtc](https://github.com/pion/webrtc) library already had
     tcpMux := webrtc.NewICETCPMux(nil, ICETCPListener, 8)
 ```
 
-These two lines starts an ICETCP listner on `addr`. Next the details of this server are added to the webrtc API:
+These two lines starts an ICETCP server on `addr`. Next the details of this server are added to the webrtc API:
 
 ```go
     var settingEngine webrtc.SettingEngine
-
+	settingEngine.SetNetworkTypes([]webrtc.NetworkType{
+		webrtc.NetworkTypeTCP4,
+		webrtc.NetworkTypeTCP6,
+	})
     settingEngine.SetICETCPMux(tcpMux)
     api := webrtc.NewAPI(webrtc.WithSettingEngine(settingEngine))
 ```
