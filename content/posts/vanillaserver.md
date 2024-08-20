@@ -1,6 +1,6 @@
 ---
-title: "Vanilla Server"
-date: 2024-08-12T09:50:06+03:00
+title: "Simplifying things with a Vanilla Server"
+date: 2024-08-20T11:50:06+03:00
 ---
 
 Docker is great. It's not only a lightweight VM but also a library of OS images.
@@ -37,11 +37,12 @@ and great tools like `nginx`, `supervisord` and `fabric`.
 
 ## Enter the Vanilla Server
 
-I decided to go back to the basics and run peerbook on a single server.
-The only additional service is a WAF and I chose `ngrok` for that -
+We decided to go back to the basics and run peerbook on a single server
+with no virtualization.
+Excpet for the server we only use a WAF and we chose `ngrok` for that -
 more on that later.
 
-The WAF routes traffic to the servers ingress which is 
+The WAF routes traffic to the servers ingress which is
 an nginx reverse proxy which forwards it to the peerbook servers.
 nginx proxies two servers: live and next and each with its own binary and port.
 What's best about nginx this time around is that the LLaMas understand it.
@@ -192,10 +193,10 @@ It's a great tool for managing remote servers and I'm glad it's still alive and 
 The server is on the internet and is open to attacks.
 DDoS attacks and other malicious traffic can bring it down and the Web Application Firewall is there to protect it.
 I evaluated a few option and choose `ngrok` because it's easy to install and use.
-It's also been recommended by a few Terminal7 users and used by a few millions.
+It's also been recommended by a few Terminal7 users and used by a millions of devs.
 
 ngrok works through an agent that opens a TLS channels between the host and ngrok servers.
-All traffic is going over this channels and no ports needs to be open to the internet.
+Server's traffic goes over this channels and there's no need to open ports on the firewall.
 Unlike other solutions, with ngrok it's the server's job to introduce itself to the WAF.
 Instead of a web-based configuration and firewall setup, there's one /etc/ngrok.yml:
 
@@ -224,7 +225,8 @@ ngrok's GLBS will route US users to the US server and EU users to the EU server.
 There's more than one way to skin a cat, and the same goes for deploying web services.
 While Docker and k8s have become the de 
 facto standard for SaaS, they're not always the best choice.
-For a latency-critical application with a binary server the retro server approach is better.
+When your server is a binary and you either expect few user or have
+a latency-critical application vanilla is better.
 
 With the right setup and fabfile, we can easily maintain a world-wide network
-of servers and deliver redundancy  and low latency.
+of servers and deliver redundancy and low latency.
