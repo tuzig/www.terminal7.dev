@@ -1,6 +1,6 @@
 ---
 title: "Simplifying things with a Vanilla Server"
-date: 2024-08-20T11:50:06+03:00
+date: 2024-08-22T11:50:06+03:00
 ---
 
 Docker is great. It's not only a lightweight VM but also a library of OS images.
