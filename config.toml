@@ -27,7 +27,7 @@ enableemoji = true
 
   [[menu.main]]
     name = "github"
-    url = "https://github.com/tuzig/terminal7"
+    url = "https://github.com/tuzig"
     weight = 100
 
   [[menu.main]]
