@@ -1,6 +1,6 @@
 ---
 title: "About Us"
-date: 2023-08-01T01:49:39+03:00
+date: 2024-10-10T10:15:39+03:00
 layout: "privacy"
 ---
 
@@ -22,11 +22,20 @@ We welcome contributions from the community. If you're interested in contributin
 to Terminal7, choose the repo you're interested in and start by running it locally.
 Once the tests pass, look for an issue that interests you and start asking questions.
 
-If you want to help with the vanilla TypeScript frontend,
-it's in [Terminal7](https://github.com/tuzig/terminal7).
-If you want to help with our Go backend, check out [webexec](https://github.com/tuzig/webexec).
-We also have a Go-based signaling service in [peerbook](https://github.com/tuzig/peerbook).
-Both Go servers are based on [pion](https://pion.ly) and are a great way to get started
-with WebRTC.
+## Our Repos and Tech Stack:
+
+### Web Front End
+
+* [`terminal7`](https://github.com/tuzig/) - a  vanilla **TypeScript** app (no framework), bundled with `vite`, tested with `vitest` and `playwright`.
+* [www.terminal7.dev](https://github/tuzig/www.terminal7.dev) - (you're loooking at it...) - a static website generated with [`hugo`](https://gohugo.io/)
+
+### Backend services
+
+  * [`webexec`](https://github.com/tuzig/webexec) - **Golang** using [`pion`](https://pion.ly) for WebRTC.
+  * [`peerbook`](https://github.com/tuzig/) - **Golang** using [`pion`](https://pion.ly) for WebRTC
+
+## Our contributors
 
 {{< authors >}}
+
+
