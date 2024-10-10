@@ -21,12 +21,12 @@ Please contribute using PRs.
 ## Commit Messages
 We believe in keeping our git history clean and readable. Here are our rules:
 
-1. Each commit message should start with a capital later. and be in the present progressive tense. 
-2. If the PR is linked to an issue - end the title of the commit messaage with the number.
+1. Each commit message should start with a capital letter and be in the present progressive tense.
+2. If the PR is linked to an issue, end the title of the commit message with the issue number.
 
 Examples:
 * `Adding zapping #123`
-* `Adding README.md`.
+* `Adding README.md`
 
 ## branch names
 No conventions.
