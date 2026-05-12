@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-    {{ $mainSCSS := resources.Get "scss/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") }}
+    {{ $mainSCSS := resources.Get "scss/main.scss" | css.Sass (dict "outputStyle" "compressed") }}
 
     <!-- Stylesheets: Choose the ones to include below! -->
     {{ $stylesheet := slice $mainSCSS | resources.Concat "css/style.css" }}
