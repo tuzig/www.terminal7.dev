@@ -15,5 +15,9 @@
     {{ partial "sections/features-home.html" . }}
   {{ end }}
 
+  {{ with .Site.Data.home.copymode }}
+    {{ partial "sections/features-copymode.html" . }}
+  {{ end }}
+
   {{ partial "sections/blog.html" . }}
 {{ end }}

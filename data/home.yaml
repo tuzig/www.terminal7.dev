@@ -34,6 +34,19 @@ web:
     alt: "A layer cake of the protocols Terminal7 uses"
 
 
+copymode:
+  title: "Mark & yank with surgical precision."
+  text: >
+    Selecting text by touch or trackpad is sloppy — words land
+    mid-sentence, line endings get lost. Copy Mode drops the active
+    pane into a vim-style visual selection: move with hjkl, toggle a
+    mark with space, hit enter to yank straight into the clipboard.
+    Search the scrollback with <code>/</code> and <code>?</code>
+    without lifting your hands off the keyboard.
+  image:
+    src: "/images/copy-mode.png"
+    alt: "Terminal7 pane in copy mode: a yellow-highlighted selection on a filename, with the scrollback search bar showing a 'yaml' query"
+
 home:
   title: "Connect your way. We'll meet you there."
   text: >
