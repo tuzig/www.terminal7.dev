@@ -1,0 +1,30 @@
+FROM ubuntu:24.04
+
+# Install common development tools
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    git \
+    jq \
+    ripgrep \
+    hugo \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Hugo extended (required for SCSS/Sass processing)
+# Install just
+COPY .agents/sandbox/just /usr/local/bin
+
+COPY Justfile .
+
+# Runs as root inside the container — bootstrap must NOT use sudo
+RUN just bootstrap
+# Asimi runtime — appended to /etc/bash.bashrc so the command-wrapper protocol
+# (__asimi_run) used by the podman runner is sourced by every interactive bash
+# shell BEFORE /root/.bashrc, regardless of user customizations.
+COPY .agents/sandbox/asimi_runtime.sh /tmp/asimi_runtime.sh
+RUN cat /tmp/asimi_runtime.sh >> /etc/bash.bashrc && rm /tmp/asimi_runtime.sh
+
+COPY .agents/sandbox/bashrc /root/.bashrc
+
+# Default command: start shell (bashrc handles startup tasks)
+CMD ["/bin/bash"]

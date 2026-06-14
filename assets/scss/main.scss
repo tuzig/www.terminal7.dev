@@ -1,0 +1,113 @@
+@import "reset";
+@import "grid";
+@import "utilities";
+
+@import "sections/section-hero";
+@import "sections/section-gestures";
+@import "sections/section-web";
+@import "sections/section-home";
+@import "sections/section-contact";
+@import "sections/section-blog";
+@import "sections/section-pricing";
+@import "sections/footer";
+@import "syntax/main";
+
+html,
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  color: #00FAFA;
+  scroll-behavior: smooth;
+  min-width: 340px;
+}
+
+
+@media (min-width: 576px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-color: #11051E;
+  border: solid 16px #271D30;
+  overflow-x: hidden;
+}
+
+h3 { font-size: 1.5rem; }
+
+a {
+  color: #00FAFA;
+  text-decoration: none;
+}
+a:hover {
+  color: #00FAFA;
+  text-decoration: underline;
+}
+pre {
+    box-sizing: border-box;
+    margin: 0 0 1.75em 0;
+    width: 100%;
+    padding: 24px;
+    border-radius: 2px;
+    font-size:16px;
+    line-break: anywhere;
+    background-color: black;
+    font-family: monospace;
+}
+strong {
+    font-weight: 800;
+}
+.menu-nav {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-top:16px;
+}
+
+.menu-item {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 576px) {
+  .menu-item {
+    font-size: 1rem;
+  }
+}
+
+.section-hero {
+  position: relative;
+}
+
+.section-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+// .section-features-title {
+//   font-size: 24px;
+
+//   // Medium devices (tablets, 768px and up)
+//   @media (min-width: 768px) {
+//     font-size: 26px;
+//   }
+// }
+.privacy {
+    float: right;
+    margin-right: 10em;
+    text-decoration: underline;
+}
+.authors {
+    padding: 1em;   
+}
+.authors li {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline;
+}
+

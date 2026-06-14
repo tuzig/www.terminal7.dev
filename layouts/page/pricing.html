@@ -1,0 +1,42 @@
+{{ define "main" }}
+<section class="section section-hero-single">
+  <div class="hero-container container">
+    <div class="hero-box">
+      <a href="{{ .Site.BaseURL }}">
+        <h1 class="hero-title"><img class="logo-icon" src="/images/logo-icon.png" alt=""><span class="">Terminal</span><span class="color-pink-flamingo">7</span> <span class="block-icon"></span></h1>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pricing">
+  <div class="container">
+    <div class="pricing-hero">
+      <h2 class="pricing-headline">{{ .Title }}</h2>
+      <p class="pricing-subheadline">{{ .Params.description }}</p>
+    </div>
+
+    <div class="pricing-cards">
+      {{ range .Params.tiers }}
+      <div class="pricing-tier pricing-card pricing-card--{{ .class }}">
+        <h3 class="pricing-tier-name">{{ .name }}</h3>
+        <span class="pricing-tier-subtitle">{{ .subtitle }}</span>
+        <div class="pricing-price">{{ .price }}<small>{{ .price_note }}</small></div>
+        <p class="pricing-tagline">{{ .description }}</p>
+        <span class="pricing-best-for">Best for: {{ .best_for }}</span>
+        <ul class="pricing-features">
+          {{ range .features }}
+          <li>{{ . | markdownify }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="pricing-faq">
+      <h3 class="pricing-faq-title">Frequently Asked Questions</h3>
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

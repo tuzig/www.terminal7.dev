@@ -1,0 +1,217 @@
+// Section: Pricing
+// Three-tier pricing cards with cyberpunk accent borders
+
+$pricing-aqua: #00FAFA;
+$pricing-pink: #F952F9;
+$pricing-chartreuse: #D9F505;
+$pricing-bg: #11051E;
+$pricing-surface: #1A0F2E;
+
+.section-pricing {
+  padding: 64px 16px;
+
+  .pricing-hero {
+    text-align: center;
+    margin-bottom: 48px;
+
+    .pricing-headline {
+      font-size: 2rem;
+      font-family: 'Fira Code', monospace;
+      color: $pricing-aqua;
+      margin-bottom: 16px;
+
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
+    }
+
+    .pricing-subheadline {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  // ── Card Grid ──
+  .pricing-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  // ── Tier Card ──
+  .pricing-tier {
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background-color: $pricing-surface;
+    padding: 32px 24px;
+    position: relative;
+
+    .pricing-tier-name {
+      font-family: 'Fira Code', monospace;
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    .pricing-tier-subtitle {
+      display: block;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      margin-bottom: 8px;
+    }
+
+    .pricing-price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      font-family: 'Fira Code', monospace;
+      margin-bottom: 16px;
+
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
+    }
+
+    .pricing-tagline {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .pricing-best-for {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 2px;
+      font-size: 0.85rem;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 24px;
+      color: $pricing-bg;
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 6px 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.8);
+
+        &::before {
+          content: "→ ";
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  // ── Core tier (aqua) ──
+  .pricing-card--core {
+    border-top-color: $pricing-aqua;
+
+    .pricing-tier-name { color: $pricing-aqua; }
+    .pricing-price { color: $pricing-aqua; }
+    .pricing-best-for {
+      background-color: $pricing-aqua;
+    }
+  }
+
+  // ── App tier (pink-flamingo) ──
+  .pricing-card--app {
+    border-top-color: $pricing-pink;
+
+    .pricing-tier-name { color: $pricing-pink; }
+    .pricing-price { color: $pricing-pink; }
+    .pricing-best-for {
+      background-color: $pricing-pink;
+    }
+  }
+
+  // ── PeerBook tier (chartreuse) ──
+  .pricing-card--peerbook {
+    border-top-color: $pricing-chartreuse;
+
+    .pricing-tier-name { color: $pricing-chartreuse; }
+    .pricing-price { color: $pricing-chartreuse; }
+    .pricing-best-for {
+      background-color: $pricing-chartreuse;
+    }
+  }
+
+  // ── Team Section ──
+  .pricing-team {
+    max-width: 1080px;
+    margin: 48px auto 0;
+    padding: 24px;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    text-align: center;
+
+    .pricing-team-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 1.25rem;
+      color: $pricing-aqua;
+      margin-bottom: 8px;
+    }
+
+    .pricing-team-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 8px;
+    }
+
+    .pricing-team-body {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+  }
+
+  // ── FAQ Section ──
+  .pricing-faq {
+    max-width: 720px;
+    margin: 64px auto 0;
+
+    .pricing-faq-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 1.5rem;
+      color: $pricing-aqua;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    // Hugo renders markdown bold questions as <strong> inside <p>
+    p {
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+
+      strong {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $pricing-chartreuse;
+      }
+    }
+  }
+}

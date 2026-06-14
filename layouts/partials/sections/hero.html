@@ -1,0 +1,24 @@
+<section class="section section-hero">
+  <div class="hero-container container">
+    <div class="hero-box" >
+      <img class="width-100" src="/images/wire.png" alt="Wire Image">
+      <div class="buttons">
+        <a class="pwa" href='{{ .PWAUrl }}'>
+           <img alt='launch as a web app' src='/images/pwa.svg' />
+        </a>
+        <a class="android" href='{{ .playStoreUrl }}'>
+           <img alt='Get it on Google Play' src='./images/playstore.png' />
+        </a>
+        <a class="ios" href="{{ .appStoreUrl }}">
+          <img src="/images/appstore.png" alt="Get it on the App Store" />
+        </a>
+      </div>
+
+      <h1 class="hero-title"><img class="logo-icon" src="/images/logo-icon.png" alt=""><span class="logo-text">Terminal</span><span class="color-pink-flamingo">7</span> <span class="block-icon"></span></h1>
+      <p class="hero-text">{{ .headline | safeHTML }}</p>
+    </div>
+    {{ with .subheadline }}
+      <p class="hero-subheadline">{{ . | safeHTML }}</p>
+    {{ end }}
+  </div>
+</section>

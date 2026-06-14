@@ -1,0 +1,197 @@
+.section-hero {
+  padding-bottom: 64px;
+
+  .hero-box {
+    position: relative;
+
+    .logo-text {
+        font-family: 'Fira Code', monospace;
+    }
+    .buttons {
+      position: absolute;
+      bottom: -70px;
+      img {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+      }
+      a { 
+          padding: 12px 2vw;
+          float: left;
+          display: block;
+          margin-top: 16px;
+          width: 32%;
+          max-width: 200px;
+          img {
+            height: auto;
+          }
+          @media (min-width: 768px) {
+              width: 100%;
+            height: 30px;
+          }
+          @media (min-width: 992px) {
+            height: 50px;
+          }
+      }
+      @media (min-width: 576px) {
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        width: 20%;
+        bottom: 16px;
+        right: 15%;
+      }
+
+      @media (min-width: 992px) { 
+        bottom: 2px;
+      }
+
+      @media (min-width: 1200px) { 
+        bottom: 12px;
+          }
+      }
+    } 
+
+    .hero-title {
+      position: absolute;
+      top: 20.5%;
+      left: 10%;
+      transform: translateY(-50%);
+      padding-right: 32px;
+
+      font-size: 20px;
+      background-color: #11051E;
+
+      @media (min-width: 768px) {
+        font-size: 40px;
+      }
+
+      .logo-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-125%, -10%);
+        height: 125%;
+        background-color: #11051E;
+      }
+
+      .block-icon {
+        position: absolute;
+        top: 0;
+        right: 32px;
+        transform: translateX(150%);
+        height: 95%;
+        width: 10%;
+        background-color: #00FAFA;
+      }
+      .block-icon::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        height: 100%;
+        width: 100%;
+        background-color: #11051E;
+      }
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 10%;
+      left: 10%;
+
+      font-size: 20px;
+
+      @media (min-width: 576px) { 
+        font-size: 30px;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 40px;
+      }
+
+      @media (min-width: 992px) { 
+        font-size: 48px;
+      }
+
+      @media (min-width: 1200px) { 
+        font-size: 64px;
+      }
+
+    }
+    .hero-subheadline {
+      max-width: 720px;
+      margin: 96px auto 0;
+      padding: 0 32px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+        margin-top: 48px;
+      }
+    }
+    .hero-live {
+      // vertical align element to the middle
+      position: absolute;
+      right: 4%;
+      width: 8%;
+      bottom: -14px;
+      font-size: 12px;
+      line-height: 1.2;
+      p {
+          top: 50%;
+          transform: translateY(-50%);
+      }
+  }
+}
+
+.section-hero-single {
+  .hero-box {
+
+    .hero-title {
+      position: relative;
+      display: inline-block;
+
+      margin: 32px;
+      padding-right: 32px;
+
+      font-size: 20px;
+      background-color: #11051E;
+
+      @media (min-width: 768px) {
+        font-size: 40px;
+      }
+
+      .logo-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-125%, -10%);
+        height: 125%;
+        background-color: #11051E;
+      }
+
+      .block-icon {
+        position: absolute;
+        top: 0;
+        right: 32px;
+        transform: translateX(150%);
+        height: 95%;
+        width: 10%;
+        background-color: #00FAFA;
+      }
+      .block-icon::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        height: 100%;
+        width: 100%;
+        background-color: #11051E;
+      }
+    }
+  }
+}
+

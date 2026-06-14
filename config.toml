@@ -23,6 +23,11 @@ enableemoji = true
 
 [menu]
   [[menu.main]]
+    name = "pricing"
+    url = "/pricing"
+    weight = 50
+
+  [[menu.main]]
     name = "about us"
     url = "/aboutus"
     weight = 100

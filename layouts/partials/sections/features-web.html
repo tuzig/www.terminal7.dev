@@ -1,0 +1,33 @@
+<section class="section section-features-web padding-y-64">
+  <div class="container">
+    <div class="row flex-direction-column flex-direction-md-row">
+      <div class="features-list column-12 column-md-6 display-flex flex-direction-column padding-x-0">
+        <h3 class="font-family-courier-new padding-x-32 padding-y-8">{{ .title }}</h3> 
+        <div class="features-right-content">
+          <div class="features-right-text padding-x-32">
+            <div class="features-right-text-body">
+              {{ .text | safeHTML }}
+            </div>
+            <ul class="features-right-list">
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+              <li class="features-right-item padding-left-32 padding-y-8"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="features-media column-12 column-md-6 display-flex align-items-center justify-content-end">
+        <div class="width-100 padding-32">
+          <img class="width-100" src="{{ .image.src }}" alt="{{ .image.alt }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
