@@ -8,7 +8,8 @@ tiers:
   - name: "Terminal7 Core"
     subtitle: "Desktop & Web"
     price: "Free"
-    best_for: "Devs looking for a modern terminal multiplexer"
+    price_note: "/life"
+    best_for: "Devs looking for a simple & powerful terminal multiplexer"
     class: "core"
     description: "Three projects make Terminal7: the web app, the daemon and the signaling server. All are open source and the first two easy to install. Terminal7 is a community effort to revolutionize the terminal. We welcome new contributors and are happy to help on our discord server."
     features:
@@ -17,6 +18,18 @@ tiers:
       - "Mouse and gesture-driven UI"
       - "Close-loop camera"
       - "tmux-style copy mode"
+  - name: "PeerBook"
+    subtitle: "Signaling and Relay"
+    price: "$20"
+    price_note: "/year"
+    best_for: "Developers with multiple servers and those suffering from bad connections"
+    class: "peerbook"
+    description: "Simply connecting you to your servers, even when they're behind a NAT. Includes a relay service by Twilio to bypass bad network connections."
+    features:
+      - "Zero-config NAT traversal via secure WebRTC"
+      - "2FA-protected device address book"
+      - "Connect by machine name, not by IP"
+      - "End-to-end encrypted signaling"
   - name: "Terminal7 App"
     subtitle: "iPad, Android"
     price: "$30"
@@ -29,18 +42,6 @@ tiers:
       - "First-class external keyboard support"
       - "Biometric authentication"
       - "SSH support"
-  - name: "PeerBook"
-    subtitle: "Signaling and Relay"
-    price: "$20"
-    price_note: "/year"
-    best_for: "Developers with multiple servers or bad connections"
-    class: "peerbook"
-    description: "Simply connecting you to your servers, even when they're behind a NAT. Includes a relay service by Twilio to bypass bad network connections."
-    features:
-      - "Zero-config NAT traversal via secure WebRTC"
-      - "2FA-protected device address book"
-      - "Connect by machine name, not by IP"
-      - "End-to-end encrypted signaling"
 ---
 
 ### Frequently Asked Questions

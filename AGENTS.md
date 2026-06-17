@@ -2,7 +2,6 @@
 
 ## Language & Framework
 - **Static site generator**: Hugo (extended edition, v0.153.4)
-- **Theme**: `terminal7-theme` (local, under `themes/terminal7-theme/`)
 - **Templating**: Go templates (`.html` files in `layouts/`)
 - **Styling**: SCSS (processed by Hugo's built-in Sass compiler — requires Hugo **extended**)
 - **Content**: Markdown in `content/`
@@ -24,8 +23,8 @@
 - `build.sh` — production build script (fetches contributors then builds)
 - `netlify.toml` — Netlify deploy config
 - `content/` — site content (Markdown)
-- `layouts/` — page templates (overrides theme)
-- `themes/terminal7-theme/` — theme templates, SCSS, JS
+- `layouts/` — page templates
+- `assets/` — SCSS and JS source files
 
 ## Dependencies
 - Hugo extended (required for SCSS pipeline)
@@ -34,4 +33,3 @@
 
 ## Notes
 - The `public/` directory is generated output — do not edit directly
-- The theme is committed directly (not a git submodule)

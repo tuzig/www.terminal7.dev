@@ -2,9 +2,9 @@ hero:
   headline: "The terminal that<br>gets out of your way."
   subheadline: >
     Manage complex local stacks without the mental overhead.
-    Terminal7 is a visual multiplexer that replaces tmux chords
+    Terminal7 is a visual multiplexer that replaces tmux 
     with intuitive controls, keeping your workflow organized,
-    persistent, and secure across every device.
+    persistent, and secure across all devices.
   primaryCta:
     label: "Launch Web App (Free)"
     url: "https://pwa.terminal7.dev"
@@ -16,10 +16,9 @@ hero:
 gestures:
   title: "Tmux power. Zero configuration."
   text: >
-    Stop wrestling with complex dotfiles and obscure keybindings just
-    to split your screen. Terminal7 lets you slice your pane, drag
-    borders and more. Drop into a perfectly tuned multi-pane
-    environment with zero setup.
+    Save the overload of learning the amazing tmux language.
+    Use touch and mouse gestures to set and change the layout you love
+    Drop into a perfectly tuned multi-pane terminal with zero setup.
   vimeo: "793301285"
 
 web:
@@ -55,7 +54,7 @@ home:
     else — laptops on coffee-shop Wi-Fi, home desktops behind a NAT,
     machines with addresses that change — there's PeerBook: a
     managed signalling and relay service with a 2FA-protected
-    address book, so you reach your fleet by name instead of by IP.
+    address book, so you reach your server by name instead of by IP.
   image:
     src: "/images/home-image.png"
     alt: "A network diagram showing a Terminl7 user connecting to different hosts"
